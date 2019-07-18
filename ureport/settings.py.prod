@@ -115,3 +115,6 @@ sentry_sdk.init(
     dsn=config('RAVEN_CONFIG', default=''),
     integrations=[DjangoIntegration()]
 )
+
+UREPORT_ASYNC_FETCHED_DATA_CACHE_TIME = config('UREPORT_ASYNC_FETCHED_DATA_CACHE_TIME', default=3600)
+UREPORT_RUN_FETCHED_DATA_CACHE_TIME = config('UREPORT_RUN_FETCHED_DATA_CACHE_TIME', default=600)
