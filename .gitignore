@@ -89,3 +89,5 @@ celerybeat-schedule
 
 # VS code 
 .vscode
+
+.env
