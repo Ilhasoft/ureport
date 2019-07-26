@@ -119,7 +119,7 @@ def fetch_flows(org, backend=None):
 
 
 def get_flows(org, backend):
-    from ureport.polls.models import CACHE_ORG_FLOWS_KEY
+    # from ureport.polls.models import CACHE_ORG_FLOWS_KEY
 
     # cache_value = cache.get(CACHE_ORG_FLOWS_KEY % (org.pk, backend.slug), None)
     # if cache_value:
