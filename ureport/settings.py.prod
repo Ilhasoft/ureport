@@ -135,7 +135,6 @@ LOGGING = {
         },
     },
 }
->>>>>>> rapidpro/master
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'HTTPS')
