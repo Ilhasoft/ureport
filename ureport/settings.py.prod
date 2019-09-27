@@ -69,14 +69,82 @@ DATABASES = {}
 DATABASES['default'] = dj_database_url.parse(config('DEFAULT_DATABASE'))
 DATABASES['default']['CONN_MAX_AGE'] = 60
 
+# no debug toolbar in prod
+MIDDLEWARE = (
+    'raven.contrib.django.raven_compat.middleware.SentryResponseErrorIdMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'smartmin.middleware.AjaxRedirect',
+    'django.middleware.locale.LocaleMiddleware',
+    'dash.orgs.middleware.SetOrgMiddleware',
+    "ureport.utils.middleware.CheckVersionMiddleware",
+)
+
 MIDDLEWARE = MIDDLEWARE + ('whitenoise.middleware.WhiteNoiseMiddleware',)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'root': {
+        'level': 'WARNING',
+        'handlers': ['sentry'],
+    },
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+    },
+    'handlers': {
+        'sentry': {
+            'level': 'ERROR',
+            'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
+        'null': {
+            'level': 'DEBUG',
+            'class': 'logging.NullHandler',
+        },
+    },
+    'loggers': {
+        'django.db.backends': {
+            'level': 'ERROR',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+        'raven': {
+            'level': 'DEBUG',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+        'sentry.errors': {
+            'level': 'DEBUG',
+            'handlers': ['console'],
+            'propagate': False,
+        },
+        'django.security.DisallowedHost': {
+            'handlers': ['null'],
+            'propagate': False,
+        },
+    },
+}
+>>>>>>> rapidpro/master
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'HTTPS')
 
 REDIS_HOST = config('REDIS_HOST')
 REDIS_DATABASE = config('REDIS_DATABASE', default='1')
+# compress arguments
+COMPRESS_CSS_HASHING_METHOD = 'content'
+COMPRESS_OFFLINE_CONTEXT = 'ureport.utils.offline_context'
 
 BROKER_URL = 'redis://{}:6379/{}'.format(REDIS_HOST, REDIS_DATABASE)
 
@@ -100,8 +168,7 @@ COMPRESS_OFFLINE = config('COMPRESS_OFFLINE', default=True, cast=bool)
 COMPRESS_CSS_FILTERS = [
     'compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.cssmin.CSSMinFilter']
 COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']
-COMPRESS_OFFLINE_CONTEXT = dict(
-    STATIC_URL=STATIC_URL, base_template='frame.html', debug=False, testing=False)
+#COMPRESS_OFFLINE_CONTEXT = dict(STATIC_URL=STATIC_URL, base_template='frame.html', debug=False, testing=False)
 
 PREVIOUS_ORG_SITES = [
     {
