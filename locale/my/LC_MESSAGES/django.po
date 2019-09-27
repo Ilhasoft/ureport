@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UReport\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-21 10:49+0000\n"
+"POT-Creation-Date: 2019-09-26 23:06+0000\n"
 "PO-Revision-Date: 2016-10-26 13:08+0000\n"
 "Last-Translator: Sandar Linn <slinn@unicef.org>\n"
 "Language-Team: Burmese (http://www.transifex.com/rapidpro/ureport/language/my/)\n"
@@ -356,6 +356,8 @@ msgstr "သင့္အားဖိတ္ေခၚထားေသာ link မွ
 msgid "Join %(name)s"
 msgstr "U-Report တြင္ပါ၀င္ရန္"
 
+#, fuzzy
+#| msgid "Join"
 msgid "Join"
 msgstr "ပူးေပါင္းပါ၀င္လိုပါသည္"
 
@@ -664,6 +666,55 @@ msgstr "သင့္ေမးခြန္းကို ေနာက္ဆံု�
 msgid "Import %s"
 msgstr ""
 
+msgid "Back to Website"
+msgstr ""
+
+msgid "Welcome, "
+msgstr ""
+
+msgid "Logout"
+msgstr "ယခုစာမ်က္ႏွာမွထြက္မည္"
+
+msgid "Opinions"
+msgstr ""
+
+msgid "Users"
+msgstr "အသံုးျပဳသူမ်ား"
+
+msgid "Settings"
+msgstr ""
+
+#, fuzzy
+#| msgid "Images"
+msgid "Pages"
+msgstr "ဓါတ္ပံုမ်ား"
+
+msgid "Jobs"
+msgstr "အလုပ္အကိုင္မ်ား"
+
+msgid "Photos"
+msgstr ""
+
+#, fuzzy
+#| msgid "Category Images"
+msgid "Categories Images"
+msgstr "အမ်ိဳးအစားအလိုက္ ဓါတ္ပံုမ်ား"
+
+msgid "News Items"
+msgstr "အမ်ိဳးအမည္သစ္မ်ား"
+
+msgid "Orgs"
+msgstr "အဖြဲ႕အစည္းမ်ား"
+
+msgid "Images"
+msgstr "ဓါတ္ပံုမ်ား"
+
+msgid "About"
+msgstr "U-Report အေၾကာင္း"
+
+msgid "Engagement"
+msgstr ""
+
 msgid "U-Report"
 msgstr "U-Report"
 
@@ -672,15 +723,6 @@ msgstr "ထိန္းခ်ဳပ္သူ"
 
 msgid "Configuration"
 msgstr "အစီအစဥ္"
-
-msgid "Orgs"
-msgstr "အဖြဲ႕အစည္းမ်ား"
-
-msgid "Users"
-msgstr "အသံုးျပဳသူမ်ား"
-
-msgid "Images"
-msgstr "ဓါတ္ပံုမ်ား"
 
 msgid "Content"
 msgstr "အေၾကာင္းအရာ"
@@ -693,9 +735,6 @@ msgstr "ေမးခြန္းမ်ား"
 
 msgid "Category Images"
 msgstr "အမ်ိဳးအစားအလိုက္ ဓါတ္ပံုမ်ား"
-
-msgid "News Items"
-msgstr "အမ်ိဳးအမည္သစ္မ်ား"
 
 msgid "Job Sources"
 msgstr "အလုပ္ေနရာမ်ား"
@@ -730,22 +769,27 @@ msgstr "ပူးေပါင္းရန္ အဆင့္မ်ား"
 msgid "Additional Menu"
 msgstr "ထပ္တိုး မီႏူး"
 
-msgid "Logout"
-msgstr "ယခုစာမ်က္ႏွာမွထြက္မည္"
-
-msgid "About"
-msgstr "U-Report အေၾကာင္း"
-
 msgid "U-Reporters"
 msgstr "အခ်က္အလက္ေပးပို႕သူ လူငယ္မ်ား"
-
-msgid "Jobs"
-msgstr "အလုပ္အကိုင္မ်ား"
 
 msgid "Join & Engage"
 msgstr "U-Report တြင္ပါ၀င္ရန္"
 
 msgid "FOLLOW US ON"
+msgstr ""
+
+msgid "SELECT YOUR COUNTRY"
+msgstr ""
+
+#, fuzzy
+#| msgid "Join"
+msgid "Join Now"
+msgstr "ပူးေပါင္းပါ၀င္လိုပါသည္"
+
+msgid "READ MORE"
+msgstr "ထပ္မံဖတ္ရွဳရန္"
+
+msgid "EXPLORE ENGAGEMENT"
 msgstr ""
 
 msgid ""
@@ -1081,9 +1125,6 @@ msgstr "မဆက္စပ္ေသာ ေမးခြန္းမ်ား"
 msgid "No featured images."
 msgstr "မေဖာ္ျပထားေသာ ဓါတ္ပံုမ်ား"
 
-msgid "READ MORE"
-msgstr "ထပ္မံဖတ္ရွဳရန္"
-
 msgid "Even"
 msgstr "အညီအမွ်"
 
@@ -1149,6 +1190,219 @@ msgstr "စာရင္းသြင္းထားၿပီး"
 
 msgid "Week of"
 msgstr "အပတ္၏"
+
+msgid "SELECT COUNTRY"
+msgstr ""
+
+msgid "Custom pages"
+msgstr ""
+
+msgid "See by the numbers how we are engaging youth voices for positive social change."
+msgstr ""
+
+msgid "Export and Share"
+msgstr ""
+
+msgid "Want to tell the world about this? Download this image to easily share on social media or for a beautiful presentation!"
+msgstr ""
+
+#, fuzzy
+#| msgid "Polls"
+msgid "Polled"
+msgstr "ေမးခြန္းမ်ား"
+
+#, fuzzy
+#| msgid "U-Reporters"
+msgid "Reporters"
+msgstr "အခ်က္အလက္ေပးပို႕သူ လူငယ္မ်ား"
+
+msgid "Top Region"
+msgstr ""
+
+#, fuzzy
+#| msgid "LOCATIONS"
+msgid "LATEST OPINION"
+msgstr "တည္ေနရာမ်ား"
+
+#, fuzzy
+#| msgid "VIEW FULL RESULT"
+msgid "VIEW FULL RESULTS"
+msgstr "ရလဒ္အျပည့္အစံုကို ၾကည့္ရန္"
+
+msgid "PARTNERING WITH"
+msgstr ""
+
+#, fuzzy
+#| msgid "U-REPORTERS IN"
+msgid "U-REPORTERS"
+msgstr "လူငယ္အသံအစီအစဥ္တြင္ပါ၀င္သူမ်ား ၀င္ေရာက္ရန္"
+
+msgid "IN"
+msgstr ""
+
+#, fuzzy
+#| msgid "U-REPORTERS IN"
+msgid "COUNTRIES WORLDWIDE"
+msgstr "လူငယ္အသံအစီအစဥ္တြင္ပါ၀င္သူမ်ား ၀င္ေရာက္ရန္"
+
+msgid "AGES"
+msgstr ""
+
+#, fuzzy
+#| msgid "READ MORE"
+msgid "LEARN MORE"
+msgstr "ထပ္မံဖတ္ရွဳရန္"
+
+msgid "+ New "
+msgstr ""
+
+msgid "+ New Page"
+msgstr ""
+
+#, fuzzy
+#| msgid "LOCATIONS"
+msgid "LATEST NOTIFICATIONS"
+msgstr "တည္ေနရာမ်ား"
+
+#, fuzzy
+#| msgid "Manage Users"
+msgid "Backends"
+msgstr "အသံုးျပဳသူမ်ားကို စီမံရန္"
+
+msgid "+ New Poll"
+msgstr ""
+
+msgid "Poll Results Data"
+msgstr ""
+
+#, fuzzy
+#| msgid "Results"
+msgid "Refresh Results"
+msgstr "ရလဒ္မ်ား"
+
+msgid "Join U-Report, Your voice matters."
+msgstr ""
+
+msgid "JOIN NOW"
+msgstr ""
+
+msgid "We are a part of a global platform working to change the lives of young people around the world."
+msgstr ""
+
+msgid "Learn more about how U-Report is empowering and connecting young people to speak out on issues that matter to them."
+msgstr ""
+
+msgid "How would you like to join?"
+msgstr ""
+
+msgid "Text"
+msgstr ""
+
+msgid "No results found"
+msgstr ""
+
+#, fuzzy
+#| msgid "RESPONSE RATE"
+msgid "RESPONSES"
+msgstr "တုံ႕ံျပန္မႈႏွဳန္း"
+
+#, fuzzy
+#| msgid "RESPONSE RATE"
+msgid "TOTAL RESPONSES"
+msgstr "တုံ႕ံျပန္မႈႏွဳန္း"
+
+#, python-format
+msgid "%(responded)s responded out of %(polled)s polled"
+msgstr ""
+
+msgid "ALL"
+msgstr ""
+
+#, fuzzy
+#| msgid "LOCATIONS"
+msgid "LOCATION"
+msgstr "တည္ေနရာမ်ား"
+
+msgid "Written by:"
+msgstr ""
+
+#, fuzzy
+#| msgid "U-REPORTER STATISTICS"
+msgid "OVERALL STATISTICS"
+msgstr "လူငယ့္အသံအစီအစဥ္တြင္ ပါ၀င္သူမ်ား၏ စာရင္းဇယား"
+
+msgid "THIS YEAR"
+msgstr ""
+
+#, fuzzy
+#| msgid "RESPONSE RATE"
+msgid "AVG RESPONSE RATE"
+msgstr "တုံ႕ံျပန္မႈႏွဳန္း"
+
+#, fuzzy
+#| msgid "U-REPORTERS IN"
+msgid "U-REPORTERS BY REGION"
+msgstr "လူငယ္အသံအစီအစဥ္တြင္ပါ၀င္သူမ်ား ၀င္ေရာက္ရန္"
+
+#, fuzzy
+#| msgid "POLL RESULTS"
+msgid "FILTER RESULTS"
+msgstr "မိမိသေဘာအေလ်ာက္ ျပန္လည္ေျဖၾကားမႈရလဒ္မ်ား"
+
+#, python-format
+msgid ""
+"\n"
+"            Are you sure you want to remove <strong>%(object)s</strong>?\n"
+"          "
+msgstr ""
+
+#, python-format
+msgid ""
+"\n"
+"             %(counter)s result\n"
+"           "
+msgid_plural ""
+"\n"
+"              %(counter)s results\n"
+"            "
+msgstr[0] ""
+
+#, python-format
+msgid ""
+"\n"
+"             Results %(start)s-%(end)s of %(count)s\n"
+"           "
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Enter Dashboard"
+msgstr ""
+
+#, python-format
+msgid ""
+"\n"
+"                Sorry, you cannot log in at this time because we received %(failed_login_limit)s incorrect login attempts.\n"
+"              "
+msgstr ""
+
+#, python-format
+msgid ""
+"\n"
+"                    Please wait %(lockout_timeout)s minutes before to try log in again.\n"
+"                  "
+msgstr ""
+
+#, python-format
+msgid ""
+"\n"
+"        <strong>Your password has expired.</strong> Site policy states that you must pick a new password every %(expire_days)s days, and that passwords must not have been used within the previous %(window_days)s days.\n"
+"      "
+msgstr ""
+
+msgid "+ New Story"
+msgstr ""
 
 #, python-format
 msgid "Refreshed %s cache for this organization"
@@ -1319,6 +1573,16 @@ msgstr "ေမးခြန္းအတြက္ ေျဖာ္ျပရမည�
 msgid "The organization this poll is part of"
 msgstr "ယခုေမးခြန္ႏွင့္ ပတ္သတ္ေသာ အဖြဲ႕အစည္း"
 
+#, fuzzy
+#| msgid "The title for this story"
+msgid "The title for this response story"
+msgstr "သတင္းေဆာင္းပါး၏ေခာင္းစဥ္မွာ"
+
+#, fuzzy
+#| msgid "The writer of the story"
+msgid "The writer of the response story"
+msgstr "သတင္းေဆာင္းပါးေရးသူ"
+
 msgid "The poll to associate to"
 msgstr "ယခုေမးခြန္းႏွင့္ ဆက္ႏြယ္ေသာ"
 
@@ -1399,32 +1663,13 @@ msgstr "ေမးခြန္းစာမ်က္ႏွာႏွင့္ previ
 msgid "Image to display on poll page and in previews (optional)"
 msgstr "ေမးခြန္းစာမ်က္ႏွာႏွင့္ preview မ်ားတြင္ေဖာ္ျပရန္ ဓါတ္ပံု(ျခြင္းခ်က္)"
 
-msgid "Featured Poll Responses"
-msgstr "ေဖာ္ျပထားေသာ ေမးခြန္းအေျဖမ်ား"
+#, fuzzy
+#| msgid "Poll Questions"
+msgid "Poll Response"
+msgstr "ေမးခြန္းမ်ား"
 
 msgid "Your poll has been updated."
 msgstr "သင့္ေမးခြန္းကို ေနာက္ဆံုးအဆင့္ျပဳလုပ္ထားသည္"
-
-#, python-format
-msgid "Response %d Reporter"
-msgstr ""
-
-msgid "The name or alias of the responder."
-msgstr "ျပန္လည္ေျဖၾကားသူ၏အမည္"
-
-#, python-format
-msgid "Response %d Location"
-msgstr ""
-
-msgid "The location of the responder."
-msgstr "ျပန္လည္ေျဖၾကားသူ၏တည္ေနရာ"
-
-#, python-format
-msgid "Response %d Message"
-msgstr ""
-
-msgid "The text of the featured response."
-msgstr "ေဖာ္ျပထားေသာ အေျဖစာသား"
 
 msgid "Poll Questions"
 msgstr "ေမးခြန္းမ်ား"
@@ -1500,8 +1745,66 @@ msgstr "ယခုအဖြဲ႕အစည္းကို landing စာမ်က
 msgid "The shortcode that users will use to contact U-Report locally"
 msgstr "U-Report ကိုဆက္သြယ္ရန္ အသံုးျပဳသူမ်ားသံုးမည့္ နံပါတ္အတို"
 
+#, fuzzy
+#| msgid "The shortcode that users will use to contact U-Report locally"
+msgid "The whatapp number that users will use to contact U-Report if you have one"
+msgstr "U-Report ကိုဆက္သြယ္ရန္ အသံုးျပဳသူမ်ားသံုးမည့္ နံပါတ္အတို"
+
 msgid "The short text used to direct visitors to join U-Report"
 msgstr "U-Report တြင္ပါ၀င္မည့္သူမ်ားကို လမ္းညႊန္ရန္ စာသားအတို"
+
+msgid "The YouTube video ID for how to join U-Report section"
+msgstr ""
+
+msgid "The title of the photos section U-Report homepage"
+msgstr ""
+
+msgid "The description of the photos section U-Report homepage"
+msgstr ""
+
+#, fuzzy
+#| msgid "The location of the responder."
+msgid "The description of the opinions page"
+msgstr "ျပန္လည္ေျဖၾကားသူ၏တည္ေနရာ"
+
+#, fuzzy
+#| msgid "The location of the responder."
+msgid "The description of the stories page"
+msgstr "ျပန္လည္ေျဖၾကားသူ၏တည္ေနရာ"
+
+msgid "The description of the engagement page"
+msgstr ""
+
+msgid "The callout message on the footer engagement section"
+msgstr ""
+
+#, fuzzy
+#| msgid "The primary color for styling for this organization"
+msgid "The primary color for styling for this organization, should be dark"
+msgstr "သည္အဖြဲ႕အစည္းအားျခယ္မွဳန္းထားေသာ မူလအေရာင္"
+
+#, fuzzy
+#| msgid "The secondary color for styling for this organization"
+msgid "The secondary color for styling for this organization, should be dark"
+msgstr "သည္အဖြဲ႕အစည္းအား ျခယ္သထားေသာ ဒုတိယအေရာင္"
+
+#, fuzzy
+#| msgid "The primary color for styling for this organization"
+msgid "The tertiary color for styling for this organization, should be dark"
+msgstr "သည္အဖြဲ႕အစည္းအားျခယ္မွဳန္းထားေသာ မူလအေရာင္"
+
+#, fuzzy
+#| msgid "The primary color for styling for this organization"
+msgid "The primary highlight color for styling for this organization, should be light"
+msgstr "သည္အဖြဲ႕အစည္းအားျခယ္မွဳန္းထားေသာ မူလအေရာင္"
+
+#, fuzzy
+#| msgid "The secondary color for styling for this organization"
+msgid "The secondary highlight color for styling for this organization, should be light"
+msgstr "သည္အဖြဲ႕အစည္းအား ျခယ္သထားေသာ ဒုတိယအေရာင္"
+
+msgid "Up to 6 colors for styling charts, use comma between colors"
+msgstr "styling chartမ်ားအတြက္ အေရာင္ ၆မ်ိဳး၊ အေရာင္မ်ားၾကားတြင္ comma သံုးေပးရန္"
 
 msgid "The color used to draw the text on the join bar"
 msgstr "join စာသားတြင္ အသံုးျပဳမည့္အေရာင္"
@@ -1517,9 +1820,6 @@ msgstr "သည္အဖြဲ႕အစည္းအား ျခယ္သထာ�
 
 msgid "The background color for the site"
 msgstr "ယခု site ၏ေနာက္ခံအေရာင္"
-
-msgid "Up to 6 colors for styling charts, use comma between colors"
-msgstr "styling chartမ်ားအတြက္ အေရာင္ ၆မ်ိဳး၊ အေရာင္မ်ားၾကားတြင္ comma သံုးေပးရန္"
 
 #, fuzzy
 #| msgid "Up to 6 colors for styling charts, use comma between colors"
@@ -1577,6 +1877,12 @@ msgstr "အမ်ားျပည္သူျမင္သာေသာ site တြ
 msgid "If this org if for global data. e.g: It shows a world map instead of a country map."
 msgstr "သည္အဖြဲ႕အစည္းသည္ ႏိုင္ငံတကာအခ်က္အလက္မ်ားကို ေဖာ္ျပလွ်င္ ႏိုင္ငံတစ္ႏိုင္ငံ၏ေျမပံုအစား ႏိုင္ငံတကာေျမပံုသာ ျပလိမ့္မည္"
 
+msgid "Whether to activate an extra gender."
+msgstr ""
+
+msgid "Whether to activate the new design."
+msgstr ""
+
 msgid "The alpha-3 ISO code of the organization so that it appears the stories widget U-Report App. Example: BRA, NIG, CMR (Use GLOBAL if U-Report is Global)."
 msgstr ""
 
@@ -1602,8 +1908,63 @@ msgstr ""
 msgid "If you need to include some custom HTML codes in you org pages, like custom analytics code snippets"
 msgstr "သင့္အဖြဲ႕အစည္း၏စာမ်က္ႏွာမ်ားေပၚတြင္ သံုးေနၾက custom analytics code snippets မ်ားကဲ့သို႕ HTML code မ်ားကိုထည့္သြင္းေဖာ္ျပရန္လိုအပ္လာပါက "
 
+msgid "90 Days"
+msgstr ""
+
+msgid "6 Months"
+msgstr ""
+
+msgid "12 Months"
+msgstr ""
+
+msgid "Age"
+msgstr ""
+
+#, fuzzy
+#| msgid "Population"
+msgid "Location"
+msgstr "လူဦးေရ"
+
+#, fuzzy
+#| msgid "Responses"
+msgid "Opinion Responses"
+msgstr "ျပန္လည္ေျဖၾကားမႈမ်ား"
+
+msgid "Sign Up Rate"
+msgstr ""
+
+msgid "Active Users"
+msgstr ""
+
 msgid "Something to trigger localizations"
 msgstr "ျမန္မာမႈျပဳရန္ လွံဳ႕ေဆာ္ေသာအရာ"
+
+#~ msgid "Featured Poll Responses"
+#~ msgstr "ေဖာ္ျပထားေသာ ေမးခြန္းအေျဖမ်ား"
+
+#~ msgid "The name or alias of the responder."
+#~ msgstr "ျပန္လည္ေျဖၾကားသူ၏အမည္"
+
+#~ msgid "The location of the responder."
+#~ msgstr "ျပန္လည္ေျဖၾကားသူ၏တည္ေနရာ"
+
+#~ msgid "The text of the featured response."
+#~ msgstr "ေဖာ္ျပထားေသာ အေျဖစာသား"
+
+#, fuzzy
+#~| msgid "U-REPORTERS IN"
+#~ msgid "TOTAL U-REPORTERS IN"
+#~ msgstr "လူငယ္အသံအစီအစဥ္တြင္ပါ၀င္သူမ်ား ၀င္ေရာက္ရန္"
+
+#, fuzzy
+#~| msgid "Join & Engage"
+#~ msgid "Engage"
+#~ msgstr "U-Report တြင္ပါ၀င္ရန္"
+
+#, fuzzy
+#~| msgid "FILTERED BY"
+#~ msgid "FILTER BY:"
+#~ msgstr "စစ္ထုတ္ေပးထားသည္"
 
 #~ msgid "The API token for the RapidPro account this dashboard is tied to"
 #~ msgstr "RapidPro account အတြက္ API token ႏွင့္တြဲထားေသာ dashboard"
@@ -1613,9 +1974,6 @@ msgstr "ျမန္မာမႈျပဳရန္ လွံဳ႕ေဆာ္�
 
 #~ msgid "National"
 #~ msgstr "အမ်ိဳးသားအဆင့္"
-
-#~ msgid "VIEW FULL RESULT"
-#~ msgstr "ရလဒ္အျပည့္အစံုကို ၾကည့္ရန္"
 
 #~ msgid "Least responded"
 #~ msgstr "ျပန္လည္ေျဖၾကားမႈအနည္းဆံုး"

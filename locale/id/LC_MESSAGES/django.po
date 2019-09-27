@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UReport\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-21 10:49+0000\n"
+"POT-Creation-Date: 2019-09-26 23:06+0000\n"
 "PO-Revision-Date: 2016-10-26 13:08+0000\n"
 "Last-Translator: I made suwancita <isuwancita@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/rapidpro/ureport/language/id/)\n"
@@ -356,6 +356,8 @@ msgstr "link undangan Anda tidak valid. Silahkan hubungi administrator organisas
 msgid "Join %(name)s"
 msgstr "Gabung %(name)s"
 
+#, fuzzy
+#| msgid "Join"
 msgid "Join"
 msgstr "Gabung"
 
@@ -426,7 +428,11 @@ msgstr "Image to display on story page and in previews (optional)"
 msgid "Remove Item?"
 msgstr "Hapus daftar?"
 
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "    Are you sure you want to remove <b>%(object)s</b>?\n"
+#| "    "
 msgid ""
 "\n"
 "    Are you sure you want to remove <b>%(object)s</b>?\n"
@@ -462,7 +468,11 @@ msgstr[0] ""
 "\n"
 "%(counter)s hasil"
 
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "\tResults %(start)s-%(end)s of %(count)s\n"
+#| "\t"
 msgid ""
 "\n"
 "\tResults %(start)s-%(end)s of %(count)s\n"
@@ -496,7 +506,11 @@ msgstr "Token Kadaluarsa"
 msgid "Login Failure"
 msgstr "Kegagalan Masuk"
 
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "      Sorry, you cannot log in at this time because we received %(failed_login_limit)s incorrect login attempts.\n"
+#| "      "
 msgid ""
 "\n"
 "      Sorry, you cannot log in at this time because we received %(failed_login_limit)s incorrect login attempts.\n"
@@ -505,7 +519,11 @@ msgstr ""
 "\n"
 "Maaf, Anda tidak bisa login pada saat ini karena kami menerima %(failed_login_limit)s usaha login yang salah."
 
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "      Please wait %(lockout_timeout)s minutes before to try log in again.\n"
+#| "      "
 msgid ""
 "\n"
 "      Please wait %(lockout_timeout)s minutes before to try log in again.\n"
@@ -529,7 +547,11 @@ msgstr "Pemulihan"
 msgid "Please enter the email address you used to sign up and we will help you recover your password."
 msgstr "Masukkan alamat surel yang Anda gunakan untuk mendaftar dan kami akan membantu Anda mengembalikan kata kunci Anda."
 
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "  <strong>Your password has expired.</strong> Site policy states that you must pick a new password every %(expire_days)s days, and that passwords must not have been used within the previous %(window_days)s days.\n"
+#| "  "
 msgid ""
 "\n"
 "  <strong>Your password has expired.</strong> Site policy states that you must pick a new password every %(expire_days)s days, and that passwords must not have been used within the previous %(window_days)s days.\n"
@@ -682,6 +704,55 @@ msgstr "%s baru anda sudah berhasil dibuat"
 msgid "Import %s"
 msgstr "Impor %s"
 
+msgid "Back to Website"
+msgstr ""
+
+msgid "Welcome, "
+msgstr ""
+
+msgid "Logout"
+msgstr "Keluar"
+
+msgid "Opinions"
+msgstr ""
+
+msgid "Users"
+msgstr "Nama Pengguna"
+
+msgid "Settings"
+msgstr ""
+
+#, fuzzy
+#| msgid "Images"
+msgid "Pages"
+msgstr "Gambar"
+
+msgid "Jobs"
+msgstr "Pekerjaan"
+
+msgid "Photos"
+msgstr ""
+
+#, fuzzy
+#| msgid "Category Images"
+msgid "Categories Images"
+msgstr "Gambar Kategori"
+
+msgid "News Items"
+msgstr "Berita"
+
+msgid "Orgs"
+msgstr "Orgs"
+
+msgid "Images"
+msgstr "Gambar"
+
+msgid "About"
+msgstr "Tentang Kami"
+
+msgid "Engagement"
+msgstr ""
+
 msgid "U-Report"
 msgstr "U-Report"
 
@@ -690,15 +761,6 @@ msgstr "Admin"
 
 msgid "Configuration"
 msgstr "Konfigurasi"
-
-msgid "Orgs"
-msgstr "Orgs"
-
-msgid "Users"
-msgstr "Nama Pengguna"
-
-msgid "Images"
-msgstr "Gambar"
 
 msgid "Content"
 msgstr "Konten"
@@ -711,9 +773,6 @@ msgstr "Polling"
 
 msgid "Category Images"
 msgstr "Gambar Kategori"
-
-msgid "News Items"
-msgstr "Berita"
 
 msgid "Job Sources"
 msgstr "Sumber Pekerjaan"
@@ -748,23 +807,28 @@ msgstr "Bergabung dengan Langkah Konten"
 msgid "Additional Menu"
 msgstr "Menu Tambahan"
 
-msgid "Logout"
-msgstr "Keluar"
-
-msgid "About"
-msgstr "Tentang Kami"
-
 msgid "U-Reporters"
 msgstr "U-Reporters"
-
-msgid "Jobs"
-msgstr "Pekerjaan"
 
 msgid "Join & Engage"
 msgstr "Bergabung & Terlibat"
 
 msgid "FOLLOW US ON"
 msgstr "BERGABUNG DENGAN KAMI DI"
+
+msgid "SELECT YOUR COUNTRY"
+msgstr ""
+
+#, fuzzy
+#| msgid "Join"
+msgid "Join Now"
+msgstr "Gabung"
+
+msgid "READ MORE"
+msgstr "LANJUT"
+
+msgid "EXPLORE ENGAGEMENT"
+msgstr ""
 
 msgid ""
 "\n"
@@ -1126,9 +1190,6 @@ msgstr "Tidak ada yang terkait polling"
 msgid "No featured images."
 msgstr "Belum ada gambar fitur"
 
-msgid "READ MORE"
-msgstr "LANJUT"
-
 msgid "Even"
 msgstr "Genap"
 
@@ -1194,6 +1255,266 @@ msgstr "Terdaftar"
 
 msgid "Week of"
 msgstr "Minggu dari"
+
+msgid "SELECT COUNTRY"
+msgstr ""
+
+msgid "Custom pages"
+msgstr ""
+
+msgid "See by the numbers how we are engaging youth voices for positive social change."
+msgstr ""
+
+msgid "Export and Share"
+msgstr ""
+
+msgid "Want to tell the world about this? Download this image to easily share on social media or for a beautiful presentation!"
+msgstr ""
+
+#, fuzzy
+#| msgid "Polls"
+msgid "Polled"
+msgstr "Polling"
+
+#, fuzzy
+#| msgid "U-Reporters"
+msgid "Reporters"
+msgstr "U-Reporters"
+
+msgid "Top Region"
+msgstr ""
+
+#, fuzzy
+#| msgid "LOCATIONS"
+msgid "LATEST OPINION"
+msgstr "LOKASI"
+
+#, fuzzy
+#| msgid "VIEW FULL RESULT"
+msgid "VIEW FULL RESULTS"
+msgstr "LIHAT HASIL"
+
+msgid "PARTNERING WITH"
+msgstr ""
+
+#, fuzzy
+#| msgid "U-REPORTERS IN"
+msgid "U-REPORTERS"
+msgstr "U-REPORTERS DI"
+
+msgid "IN"
+msgstr ""
+
+#, fuzzy
+#| msgid "U-REPORTERS IN"
+msgid "COUNTRIES WORLDWIDE"
+msgstr "U-REPORTERS DI"
+
+msgid "AGES"
+msgstr ""
+
+#, fuzzy
+#| msgid "READ MORE"
+msgid "LEARN MORE"
+msgstr "LANJUT"
+
+msgid "+ New "
+msgstr ""
+
+msgid "+ New Page"
+msgstr ""
+
+#, fuzzy
+#| msgid "LOCATIONS"
+msgid "LATEST NOTIFICATIONS"
+msgstr "LOKASI"
+
+#, fuzzy
+#| msgid "Manage Users"
+msgid "Backends"
+msgstr "Kelola Pengguna"
+
+msgid "+ New Poll"
+msgstr ""
+
+msgid "Poll Results Data"
+msgstr ""
+
+#, fuzzy
+#| msgid "Results"
+msgid "Refresh Results"
+msgstr "Hasil"
+
+msgid "Join U-Report, Your voice matters."
+msgstr ""
+
+msgid "JOIN NOW"
+msgstr ""
+
+msgid "We are a part of a global platform working to change the lives of young people around the world."
+msgstr ""
+
+msgid "Learn more about how U-Report is empowering and connecting young people to speak out on issues that matter to them."
+msgstr ""
+
+msgid "How would you like to join?"
+msgstr ""
+
+msgid "Text"
+msgstr ""
+
+msgid "No results found"
+msgstr ""
+
+#, fuzzy
+#| msgid "RESPONSE RATE"
+msgid "RESPONSES"
+msgstr "RATING TANGGAPAN"
+
+#, fuzzy
+#| msgid "RESPONSE RATE"
+msgid "TOTAL RESPONSES"
+msgstr "RATING TANGGAPAN"
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                    %(responded)s responded out of %(polled)s polled\n"
+#| "                  "
+msgid "%(responded)s responded out of %(polled)s polled"
+msgstr ""
+"\n"
+"%(responded)s direspon dari %(polled)s jajak pendapat"
+
+msgid "ALL"
+msgstr ""
+
+#, fuzzy
+#| msgid "LOCATIONS"
+msgid "LOCATION"
+msgstr "LOKASI"
+
+msgid "Written by:"
+msgstr ""
+
+#, fuzzy
+#| msgid "U-REPORTER STATISTICS"
+msgid "OVERALL STATISTICS"
+msgstr "U-REPORTER STATISTIK"
+
+msgid "THIS YEAR"
+msgstr ""
+
+#, fuzzy
+#| msgid "RESPONSE RATE"
+msgid "AVG RESPONSE RATE"
+msgstr "RATING TANGGAPAN"
+
+#, fuzzy
+#| msgid "U-REPORTERS IN"
+msgid "U-REPORTERS BY REGION"
+msgstr "U-REPORTERS DI"
+
+#, fuzzy
+#| msgid "POLL RESULTS"
+msgid "FILTER RESULTS"
+msgstr "HASIL POLLING"
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "    Are you sure you want to remove <b>%(object)s</b>?\n"
+#| "    "
+msgid ""
+"\n"
+"            Are you sure you want to remove <strong>%(object)s</strong>?\n"
+"          "
+msgstr ""
+"\n"
+"Apakah Anda yakin ingin menghapus <b>%(object)s</b>?"
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "\t\t%(counter)s result\n"
+#| "\t"
+#| msgid_plural ""
+#| "\n"
+#| "         %(counter)s results\n"
+#| "        "
+msgid ""
+"\n"
+"             %(counter)s result\n"
+"           "
+msgid_plural ""
+"\n"
+"              %(counter)s results\n"
+"            "
+msgstr[0] ""
+"\n"
+"%(counter)s hasil"
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "\tResults %(start)s-%(end)s of %(count)s\n"
+#| "\t"
+msgid ""
+"\n"
+"             Results %(start)s-%(end)s of %(count)s\n"
+"           "
+msgstr ""
+"\n"
+"⇥Hasil %(start)s-%(end)s of %(count)s\n"
+"⇥"
+
+msgid "Error"
+msgstr ""
+
+msgid "Enter Dashboard"
+msgstr ""
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "      Sorry, you cannot log in at this time because we received %(failed_login_limit)s incorrect login attempts.\n"
+#| "      "
+msgid ""
+"\n"
+"                Sorry, you cannot log in at this time because we received %(failed_login_limit)s incorrect login attempts.\n"
+"              "
+msgstr ""
+"\n"
+"Maaf, Anda tidak bisa login pada saat ini karena kami menerima %(failed_login_limit)s usaha login yang salah."
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "      Please wait %(lockout_timeout)s minutes before to try log in again.\n"
+#| "      "
+msgid ""
+"\n"
+"                    Please wait %(lockout_timeout)s minutes before to try log in again.\n"
+"                  "
+msgstr ""
+"\n"
+"Silahkan tunggu %(lockout_timeout)s menit sebelum mencoba login kembali."
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "  <strong>Your password has expired.</strong> Site policy states that you must pick a new password every %(expire_days)s days, and that passwords must not have been used within the previous %(window_days)s days.\n"
+#| "  "
+msgid ""
+"\n"
+"        <strong>Your password has expired.</strong> Site policy states that you must pick a new password every %(expire_days)s days, and that passwords must not have been used within the previous %(window_days)s days.\n"
+"      "
+msgstr ""
+"\n"
+"<Strong> Kata sandi Anda telah kedaluwarsa. </ Strong> menyatakan kebijakan Site bahwa Anda harus memilih password baru setiap %(expire_days)s hari, dan bahwa password harus tidak telah digunakan dalam sebelumnya %(window_days)s hari"
+
+msgid "+ New Story"
+msgstr ""
 
 #, python-format
 msgid "Refreshed %s cache for this organization"
@@ -1366,6 +1687,16 @@ msgstr "Kategori gambar untuk ditampilkan untuk jajak pendapat (opsional)"
 msgid "The organization this poll is part of"
 msgstr "organisasi jajak pendapat ini adalah bagian dari"
 
+#, fuzzy
+#| msgid "The title for this story"
+msgid "The title for this response story"
+msgstr "Judul cerita"
+
+#, fuzzy
+#| msgid "The writer of the story"
+msgid "The writer of the response story"
+msgstr "Penulis cerita"
+
 msgid "The poll to associate to"
 msgstr "Jajak pendapat untuk mengaitkan ke"
 
@@ -1446,32 +1777,13 @@ msgstr "Gambar untuk ditampilkan pada halaman jajak pendapat dan di lihat. (pili
 msgid "Image to display on poll page and in previews (optional)"
 msgstr "Gambar untuk ditampilkan pada halaman jajak pendapat dan di lihat. (pilihan)"
 
-msgid "Featured Poll Responses"
-msgstr "Fitur Tanggapan Jajak Pendapat"
+#, fuzzy
+#| msgid "Poll Questions"
+msgid "Poll Response"
+msgstr "Pertanyaan polling"
 
 msgid "Your poll has been updated."
 msgstr "Polling anda sudah di rubah"
-
-#, python-format
-msgid "Response %d Reporter"
-msgstr "Tanggapan %d UReporter"
-
-msgid "The name or alias of the responder."
-msgstr "Nama atau alias dari responden tersebut."
-
-#, python-format
-msgid "Response %d Location"
-msgstr "Tanggapan %d Lokasi"
-
-msgid "The location of the responder."
-msgstr "Lokasi responden"
-
-#, python-format
-msgid "Response %d Message"
-msgstr "Tanggapan %d Pesan"
-
-msgid "The text of the featured response."
-msgstr "Respon unggulan"
 
 msgid "Poll Questions"
 msgstr "Pertanyaan polling"
@@ -1550,8 +1862,66 @@ msgstr "Centang jika ingin ditampilkan di halaman depan"
 msgid "The shortcode that users will use to contact U-Report locally"
 msgstr "Shortcode yang pengguna akan gunakan untuk menghubungi U-Report lokal"
 
+#, fuzzy
+#| msgid "The shortcode that users will use to contact U-Report locally"
+msgid "The whatapp number that users will use to contact U-Report if you have one"
+msgstr "Shortcode yang pengguna akan gunakan untuk menghubungi U-Report lokal"
+
 msgid "The short text used to direct visitors to join U-Report"
 msgstr "teks singkat yang digunakan untuk mengarahkan pengunjung untuk bergabung U-Report"
+
+msgid "The YouTube video ID for how to join U-Report section"
+msgstr ""
+
+msgid "The title of the photos section U-Report homepage"
+msgstr ""
+
+msgid "The description of the photos section U-Report homepage"
+msgstr ""
+
+#, fuzzy
+#| msgid "The location of the responder."
+msgid "The description of the opinions page"
+msgstr "Lokasi responden"
+
+#, fuzzy
+#| msgid "The location of the responder."
+msgid "The description of the stories page"
+msgstr "Lokasi responden"
+
+msgid "The description of the engagement page"
+msgstr ""
+
+msgid "The callout message on the footer engagement section"
+msgstr ""
+
+#, fuzzy
+#| msgid "The primary color for styling for this organization"
+msgid "The primary color for styling for this organization, should be dark"
+msgstr "Warna utama untuk desain organisasi ini"
+
+#, fuzzy
+#| msgid "The secondary color for styling for this organization"
+msgid "The secondary color for styling for this organization, should be dark"
+msgstr "Warna sekunder untuk desain organisasi ini"
+
+#, fuzzy
+#| msgid "The primary color for styling for this organization"
+msgid "The tertiary color for styling for this organization, should be dark"
+msgstr "Warna utama untuk desain organisasi ini"
+
+#, fuzzy
+#| msgid "The primary color for styling for this organization"
+msgid "The primary highlight color for styling for this organization, should be light"
+msgstr "Warna utama untuk desain organisasi ini"
+
+#, fuzzy
+#| msgid "The secondary color for styling for this organization"
+msgid "The secondary highlight color for styling for this organization, should be light"
+msgstr "Warna sekunder untuk desain organisasi ini"
+
+msgid "Up to 6 colors for styling charts, use comma between colors"
+msgstr "Sampai dengan 6 warna untuk styling grafik, Gunakan koma di antara warna pilihan"
 
 msgid "The color used to draw the text on the join bar"
 msgstr "Warna yang digunakan untuk menggambar teks pada gambar bersama"
@@ -1567,9 +1937,6 @@ msgstr "Warna sekunder untuk desain organisasi ini"
 
 msgid "The background color for the site"
 msgstr "Warna latar belakang untuk situs"
-
-msgid "Up to 6 colors for styling charts, use comma between colors"
-msgstr "Sampai dengan 6 warna untuk styling grafik, Gunakan koma di antara warna pilihan"
 
 #, fuzzy
 #| msgid "Up to 6 colors for styling charts, use comma between colors"
@@ -1627,6 +1994,12 @@ msgstr "Jika ada pekerjaan yang akan ditampilkan pada situs umum"
 msgid "If this org if for global data. e.g: It shows a world map instead of a country map."
 msgstr "Jika org ini jika untuk data global. mis: Ini menunjukkan peta dunia bukan peta negara."
 
+msgid "Whether to activate an extra gender."
+msgstr ""
+
+msgid "Whether to activate the new design."
+msgstr ""
+
 msgid "The alpha-3 ISO code of the organization so that it appears the stories widget U-Report App. Example: BRA, NIG, CMR (Use GLOBAL if U-Report is Global)."
 msgstr ""
 
@@ -1652,8 +2025,105 @@ msgstr ""
 msgid "If you need to include some custom HTML codes in you org pages, like custom analytics code snippets"
 msgstr "Jika Anda perlu menyertakan beberapa kode HTML di dalam halaman ORG, seperti modifikasi kode analytics"
 
+msgid "90 Days"
+msgstr ""
+
+msgid "6 Months"
+msgstr ""
+
+msgid "12 Months"
+msgstr ""
+
+msgid "Age"
+msgstr ""
+
+#, fuzzy
+#| msgid "Population"
+msgid "Location"
+msgstr "Populasi"
+
+#, fuzzy
+#| msgid "Responses"
+msgid "Opinion Responses"
+msgstr "Tanggapan"
+
+msgid "Sign Up Rate"
+msgstr ""
+
+msgid "Active Users"
+msgstr ""
+
 msgid "Something to trigger localizations"
 msgstr "Sesuatu untuk memicu lokalisasi"
+
+#~ msgid "Featured Poll Responses"
+#~ msgstr "Fitur Tanggapan Jajak Pendapat"
+
+#, python-format
+#~ msgid "Response %d Reporter"
+#~ msgstr "Tanggapan %d UReporter"
+
+#~ msgid "The name or alias of the responder."
+#~ msgstr "Nama atau alias dari responden tersebut."
+
+#, python-format
+#~ msgid "Response %d Location"
+#~ msgstr "Tanggapan %d Lokasi"
+
+#~ msgid "The location of the responder."
+#~ msgstr "Lokasi responden"
+
+#, python-format
+#~ msgid "Response %d Message"
+#~ msgstr "Tanggapan %d Pesan"
+
+#~ msgid "The text of the featured response."
+#~ msgstr "Respon unggulan"
+
+#, fuzzy, python-format
+#~| msgid ""
+#~| "\n"
+#~| "                    %(responded)s responded out of %(polled)s polled\n"
+#~| "                  "
+#~ msgid ""
+#~ "\n"
+#~ "                  %(responded)s responded out of %(polled)s polled\n"
+#~ "                "
+#~ msgstr ""
+#~ "\n"
+#~ "%(responded)s direspon dari %(polled)s jajak pendapat"
+
+#, fuzzy
+#~| msgid "U-REPORTERS IN"
+#~ msgid "TOTAL U-REPORTERS IN"
+#~ msgstr "U-REPORTERS DI"
+
+#, fuzzy
+#~| msgid "Join & Engage"
+#~ msgid "Engage"
+#~ msgstr "Bergabung & Terlibat"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                    %(responded)s responded out of %(polled)s polled\n"
+#~| "                  "
+#~ msgid ""
+#~ "\n"
+#~ "          %(questions)s question\n"
+#~ "        "
+#~ msgid_plural ""
+#~ "\n"
+#~ "          %(questions)s questions\n"
+#~ "        "
+#~ msgstr[0] ""
+#~ "\n"
+#~ "%(responded)s direspon dari %(polled)s jajak pendapat"
+
+#, fuzzy
+#~| msgid "FILTERED BY"
+#~ msgid "FILTER BY:"
+#~ msgstr "Kata Pencarian"
 
 #~ msgid "The API token for the RapidPro account this dashboard is tied to"
 #~ msgstr "API tanda untuk akun RapidPro dashboard ini terkait dengan"
@@ -1663,9 +2133,6 @@ msgstr "Sesuatu untuk memicu lokalisasi"
 
 #~ msgid "National"
 #~ msgstr "Nasional"
-
-#~ msgid "VIEW FULL RESULT"
-#~ msgstr "LIHAT HASIL"
 
 #~ msgid "Least responded"
 #~ msgstr "Respon paling sedikit"

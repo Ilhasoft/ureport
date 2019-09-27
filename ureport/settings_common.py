@@ -143,6 +143,7 @@ MIDDLEWARE = (
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "dash.orgs.middleware.SetOrgMiddleware",
+    "ureport.utils.middleware.CheckVersionMiddleware",
 )
 
 ROOT_URLCONF = "ureport.urls"
@@ -240,39 +241,133 @@ ORG_CONFIG_FIELDS = [
         ),
     ),
     dict(
+        name="whatsapp_number",
+        field=dict(
+            help_text=_("The whatapp number that users will use to contact U-Report if you have one"),
+            label="Whatapp Number",
+            required=False,
+        ),
+    ),
+    dict(
         name="join_text",
         field=dict(
             help_text=_("The short text used to direct visitors to join U-Report"), label="Join Text", required=False
         ),
     ),
     dict(
-        name="join_fg_color",
-        field=dict(help_text=_("The color used to draw the text on the join bar"), required=False),
+        name="homepage_join_video_id",
+        field=dict(
+            help_text=_("The YouTube video ID for how to join U-Report section"),
+            label="Homepage Video ID",
+            required=False,
+        ),
+    ),
+    dict(
+        name="photos_section_title",
+        field=dict(
+            help_text=_("The title of the photos section U-Report homepage"),
+            label="Photos Section Title",
+            required=False,
+        ),
+    ),
+    dict(
+        name="photos_section_description",
+        field=dict(
+            help_text=_("The description of the photos section U-Report homepage"),
+            label="Photos Description",
+            required=False,
+        ),
+    ),
+    dict(
+        name="opinions_description",
+        field=dict(help_text=_("The description of the opinions page"), label="Opinions Description", required=False),
+    ),
+    dict(
+        name="stories_description",
+        field=dict(help_text=_("The description of the stories page"), label="Stories Description", required=False),
+    ),
+    dict(
+        name="engagement_description",
+        field=dict(
+            help_text=_("The description of the engagement page"), label="Engagement Description", required=False
+        ),
+    ),
+    dict(
+        name="engagement_footer_callout",
+        field=dict(
+            help_text=_("The callout message on the footer engagement section"),
+            label="Egagement callout messages",
+            required=False,
+        ),
+    ),
+    dict(
+        name="dark1_color",
+        field=dict(help_text=_("The primary color for styling for this organization, should be dark"), required=False),
         superuser_only=True,
     ),
     dict(
-        name="join_bg_color",
-        field=dict(help_text=_("The color used to draw the background on the join bar"), required=False),
+        name="dark2_color",
+        field=dict(
+            help_text=_("The secondary color for styling for this organization, should be dark"), required=False
+        ),
         superuser_only=True,
     ),
     dict(
-        name="primary_color",
-        field=dict(help_text=_("The primary color for styling for this organization"), required=False),
+        name="dark3_color",
+        field=dict(
+            help_text=_("The tertiary color for styling for this organization, should be dark"), required=False
+        ),
         superuser_only=True,
     ),
     dict(
-        name="secondary_color",
-        field=dict(help_text=_("The secondary color for styling for this organization"), required=False),
+        name="light1_color",
+        field=dict(
+            help_text=_("The primary highlight color for styling for this organization, should be light"),
+            required=False,
+        ),
         superuser_only=True,
     ),
     dict(
-        name="bg_color",
-        field=dict(help_text=_("The background color for the site"), required=False),
+        name="light2_color",
+        field=dict(
+            help_text=_("The secondary highlight color for styling for this organization, should be light"),
+            required=False,
+        ),
         superuser_only=True,
     ),
     dict(
         name="colors",
         field=dict(help_text=_("Up to 6 colors for styling charts, use comma between colors"), required=False),
+        superuser_only=True,
+    ),
+    # deprecated, can be removed after v2 launch
+    dict(
+        name="join_fg_color",
+        field=dict(help_text=_("The color used to draw the text on the join bar"), required=False),
+        superuser_only=True,
+    ),
+    # deprecated, can be removed after v2 launch
+    dict(
+        name="join_bg_color",
+        field=dict(help_text=_("The color used to draw the background on the join bar"), required=False),
+        superuser_only=True,
+    ),
+    # deprecated, should be replaced by dark1
+    dict(
+        name="primary_color",
+        field=dict(help_text=_("The primary color for styling for this organization"), required=False),
+        superuser_only=True,
+    ),
+    # deprecated, should be replaced by dark2
+    dict(
+        name="secondary_color",
+        field=dict(help_text=_("The secondary color for styling for this organization"), required=False),
+        superuser_only=True,
+    ),
+    # deprecated, can be removed after v2 launch
+    dict(
+        name="bg_color",
+        field=dict(help_text=_("The background color for the site"), required=False),
         superuser_only=True,
     ),
     dict(
@@ -393,6 +488,18 @@ ORG_CONFIG_FIELDS = [
         superuser_only=True,
     ),
     dict(
+        name="has_extra_gender",
+        field=dict(help_text=_("Whether to activate an extra gender."), required=False),
+        superuser_only=True,
+        read_only=True,
+    ),
+    dict(
+        name="has_new_design",
+        field=dict(help_text=_("Whether to activate the new design."), required=False),
+        superuser_only=True,
+        read_only=True,
+    ),
+    dict(
         name="iso_code",
         field=dict(
             help_text=_(
@@ -477,6 +584,7 @@ INSTALLED_APPS = (
     "ureport.locations",
     "ureport.news",
     "ureport.polls",
+    "ureport.stats",
     "django_countries",
     "rest_framework",
     "rest_framework_swagger",
@@ -540,6 +648,7 @@ TEMPLATES = [
                 "ureport.assets.context_processors.set_assets_processor",
                 "ureport.public.context_processors.set_has_better_domain",
                 "ureport.public.context_processors.set_is_iorg",
+                "ureport.public.context_processors.set_linked_sites",
                 "ureport.public.context_processors.set_config_display_flags",
                 "ureport.public.context_processors.set_org_lang_params",
                 "ureport.public.context_processors.set_story_widget_url",
@@ -733,6 +842,12 @@ CELERYBEAT_SCHEDULE = {
         "schedule": timedelta(hours=1),
         "relative": True,
         "args": ("ureport.polls.tasks.pull_results_other_polls", "sync"),
+    },
+    "refresh-engagement-data": {
+        "task": "dash.orgs.tasks.trigger_org_task",
+        "schedule": timedelta(hours=6),
+        "relative": True,
+        "args": ("ureport.stats.tasks.refresh_engagement_data", "sync"),
     },
 }
 

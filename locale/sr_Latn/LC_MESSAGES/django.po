@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UReport\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-21 10:49+0000\n"
+"POT-Creation-Date: 2019-09-26 23:06+0000\n"
 "PO-Revision-Date: 2019-02-04 17:54+0000\n"
 "Last-Translator: Tales Souza <tales@ilhasoft.com.br>\n"
 "Language-Team: Serbian (Latin) (Serbia) (http://www.transifex.com/rapidpro/ureport/language/sr_RS%40latin/)\n"
@@ -357,6 +357,8 @@ msgstr "Vaš pozivni link nije ispravan. Molimo obratite se administratoru vaše
 msgid "Join %(name)s"
 msgstr "Pridruži se%(name)s"
 
+#, fuzzy
+#| msgid "Join"
 msgid "Join"
 msgstr "Pridruži se"
 
@@ -427,7 +429,11 @@ msgstr "slike koje će se prikazati uz priču i pregled. (opciono)"
 msgid "Remove Item?"
 msgstr "Ukloni stavku?"
 
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "    Are you sure you want to remove <b>%(object)s</b>?\n"
+#| "    "
 msgid ""
 "\n"
 "    Are you sure you want to remove <b>%(object)s</b>?\n"
@@ -472,7 +478,11 @@ msgstr[2] ""
 "         %(counter)s Rezultati\n"
 "        "
 
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "\tResults %(start)s-%(end)s of %(count)s\n"
+#| "\t"
 msgid ""
 "\n"
 "\tResults %(start)s-%(end)s of %(count)s\n"
@@ -505,7 +515,11 @@ msgstr "Token je istekao"
 msgid "Login Failure"
 msgstr "Greška u prijavi"
 
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "      Sorry, you cannot log in at this time because we received %(failed_login_limit)s incorrect login attempts.\n"
+#| "      "
 msgid ""
 "\n"
 "      Sorry, you cannot log in at this time because we received %(failed_login_limit)s incorrect login attempts.\n"
@@ -514,7 +528,11 @@ msgstr ""
 "\n"
 "Žao nam je, ne možete se prijaviti zbog %(failed_login_limit)spogrešnih pokušaja prijave."
 
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "      Please wait %(lockout_timeout)s minutes before to try log in again.\n"
+#| "      "
 msgid ""
 "\n"
 "      Please wait %(lockout_timeout)s minutes before to try log in again.\n"
@@ -538,7 +556,11 @@ msgstr "Obnovi"
 msgid "Please enter the email address you used to sign up and we will help you recover your password."
 msgstr "Molimo upišite e-mail adresu koju koristite za pristup i mi ćemo vam pomoći da obnovite lozinku"
 
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "  <strong>Your password has expired.</strong> Site policy states that you must pick a new password every %(expire_days)s days, and that passwords must not have been used within the previous %(window_days)s days.\n"
+#| "  "
 msgid ""
 "\n"
 "  <strong>Your password has expired.</strong> Site policy states that you must pick a new password every %(expire_days)s days, and that passwords must not have been used within the previous %(window_days)s days.\n"
@@ -691,6 +713,55 @@ msgstr "Vaš novi %s je kreiran"
 msgid "Import %s"
 msgstr "Uvezi %s"
 
+msgid "Back to Website"
+msgstr ""
+
+msgid "Welcome, "
+msgstr ""
+
+msgid "Logout"
+msgstr "Odjava"
+
+msgid "Opinions"
+msgstr ""
+
+msgid "Users"
+msgstr "Korisnici"
+
+msgid "Settings"
+msgstr ""
+
+#, fuzzy
+#| msgid "Images"
+msgid "Pages"
+msgstr "Slike"
+
+msgid "Jobs"
+msgstr "Poslovi"
+
+msgid "Photos"
+msgstr ""
+
+#, fuzzy
+#| msgid "Category Images"
+msgid "Categories Images"
+msgstr "Slike kategorija"
+
+msgid "News Items"
+msgstr "Stavke novosti"
+
+msgid "Orgs"
+msgstr "Orgs"
+
+msgid "Images"
+msgstr "Slike"
+
+msgid "About"
+msgstr "O nama"
+
+msgid "Engagement"
+msgstr ""
+
 msgid "U-Report"
 msgstr "U-Report"
 
@@ -699,15 +770,6 @@ msgstr "Administrator"
 
 msgid "Configuration"
 msgstr "Konfiguracija"
-
-msgid "Orgs"
-msgstr "Orgs"
-
-msgid "Users"
-msgstr "Korisnici"
-
-msgid "Images"
-msgstr "Slike"
 
 msgid "Content"
 msgstr "Sadržaj"
@@ -720,9 +782,6 @@ msgstr "Ankete"
 
 msgid "Category Images"
 msgstr "Slike kategorija"
-
-msgid "News Items"
-msgstr "Stavke novosti"
 
 msgid "Job Sources"
 msgstr "Izvori zadataka"
@@ -757,23 +816,28 @@ msgstr "Koraci za pridruživanje, sadržaj"
 msgid "Additional Menu"
 msgstr "Dodatni meni"
 
-msgid "Logout"
-msgstr "Odjava"
-
-msgid "About"
-msgstr "O nama"
-
 msgid "U-Reporters"
 msgstr "U-Reporteri"
-
-msgid "Jobs"
-msgstr "Poslovi"
 
 msgid "Join & Engage"
 msgstr "Pridruži se i angažuj"
 
 msgid "FOLLOW US ON"
 msgstr "PRATITE NAS NA"
+
+msgid "SELECT YOUR COUNTRY"
+msgstr ""
+
+#, fuzzy
+#| msgid "Join"
+msgid "Join Now"
+msgstr "Pridruži se"
+
+msgid "READ MORE"
+msgstr "PROČITAJ VIŠE"
+
+msgid "EXPLORE ENGAGEMENT"
+msgstr ""
 
 msgid ""
 "\n"
@@ -1128,9 +1192,6 @@ msgstr "NEVEZANE ANKETE"
 msgid "No featured images."
 msgstr "Nema karakterističnih slika"
 
-msgid "READ MORE"
-msgstr "PROČITAJ VIŠE"
-
 msgid "Even"
 msgstr "Jednako"
 
@@ -1196,6 +1257,274 @@ msgstr "Registrovani"
 
 msgid "Week of"
 msgstr "Nedelja"
+
+msgid "SELECT COUNTRY"
+msgstr ""
+
+msgid "Custom pages"
+msgstr ""
+
+msgid "See by the numbers how we are engaging youth voices for positive social change."
+msgstr ""
+
+msgid "Export and Share"
+msgstr ""
+
+msgid "Want to tell the world about this? Download this image to easily share on social media or for a beautiful presentation!"
+msgstr ""
+
+#, fuzzy
+#| msgid "polled"
+msgid "Polled"
+msgstr "anketirani"
+
+#, fuzzy
+#| msgid "U-Reporters"
+msgid "Reporters"
+msgstr "U-Reporteri"
+
+msgid "Top Region"
+msgstr ""
+
+#, fuzzy
+#| msgid "LOCATIONS"
+msgid "LATEST OPINION"
+msgstr "LOKACIJE"
+
+#, fuzzy
+#| msgid "POLL RESULTS"
+msgid "VIEW FULL RESULTS"
+msgstr "REZULTATI ANKETE"
+
+msgid "PARTNERING WITH"
+msgstr ""
+
+#, fuzzy
+#| msgid "U-REPORTERS IN"
+msgid "U-REPORTERS"
+msgstr "U-REPORTERI U"
+
+msgid "IN"
+msgstr ""
+
+#, fuzzy
+#| msgid "U-REPORTERS IN"
+msgid "COUNTRIES WORLDWIDE"
+msgstr "U-REPORTERI U"
+
+msgid "AGES"
+msgstr ""
+
+#, fuzzy
+#| msgid "READ MORE"
+msgid "LEARN MORE"
+msgstr "PROČITAJ VIŠE"
+
+msgid "+ New "
+msgstr ""
+
+msgid "+ New Page"
+msgstr ""
+
+#, fuzzy
+#| msgid "LOCATIONS"
+msgid "LATEST NOTIFICATIONS"
+msgstr "LOKACIJE"
+
+#, fuzzy
+#| msgid "Manage Users"
+msgid "Backends"
+msgstr "Upravljanje korisnicima"
+
+msgid "+ New Poll"
+msgstr ""
+
+msgid "Poll Results Data"
+msgstr ""
+
+#, fuzzy
+#| msgid "Results"
+msgid "Refresh Results"
+msgstr "Rezultati"
+
+msgid "Join U-Report, Your voice matters."
+msgstr ""
+
+msgid "JOIN NOW"
+msgstr ""
+
+msgid "We are a part of a global platform working to change the lives of young people around the world."
+msgstr ""
+
+msgid "Learn more about how U-Report is empowering and connecting young people to speak out on issues that matter to them."
+msgstr ""
+
+msgid "How would you like to join?"
+msgstr ""
+
+msgid "Text"
+msgstr ""
+
+msgid "No results found"
+msgstr ""
+
+#, fuzzy
+#| msgid "RESPONSE RATE"
+msgid "RESPONSES"
+msgstr "STOPA ODGOVORA"
+
+#, fuzzy
+#| msgid "RESPONSE RATE"
+msgid "TOTAL RESPONSES"
+msgstr "STOPA ODGOVORA"
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                    %(responded)s responded out of %(polled)s polled\n"
+#| "                  "
+msgid "%(responded)s responded out of %(polled)s polled"
+msgstr ""
+"\n"
+"%(responded)sodgovorilo od %(polled)sispitanih"
+
+msgid "ALL"
+msgstr ""
+
+#, fuzzy
+#| msgid "LOCATIONS"
+msgid "LOCATION"
+msgstr "LOKACIJE"
+
+msgid "Written by:"
+msgstr ""
+
+#, fuzzy
+#| msgid "U-REPORTER STATISTICS"
+msgid "OVERALL STATISTICS"
+msgstr "STATISTIKE O U-REPORTERIMA"
+
+msgid "THIS YEAR"
+msgstr ""
+
+#, fuzzy
+#| msgid "RESPONSE RATE"
+msgid "AVG RESPONSE RATE"
+msgstr "STOPA ODGOVORA"
+
+#, fuzzy
+#| msgid "U-REPORTERS IN"
+msgid "U-REPORTERS BY REGION"
+msgstr "U-REPORTERI U"
+
+#, fuzzy
+#| msgid "POLL RESULTS"
+msgid "FILTER RESULTS"
+msgstr "REZULTATI ANKETE"
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "    Are you sure you want to remove <b>%(object)s</b>?\n"
+#| "    "
+msgid ""
+"\n"
+"            Are you sure you want to remove <strong>%(object)s</strong>?\n"
+"          "
+msgstr ""
+"\n"
+"Jeste li sigurni da želite ukloniti <b>%(object)s</b>?"
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "\t\t%(counter)s result\n"
+#| "\t"
+#| msgid_plural ""
+#| "\n"
+#| "         %(counter)s results\n"
+#| "        "
+msgid ""
+"\n"
+"             %(counter)s result\n"
+"           "
+msgid_plural ""
+"\n"
+"              %(counter)s results\n"
+"            "
+msgstr[0] ""
+"\n"
+"\t\t%(counter)s Rezultati\n"
+"\t"
+msgstr[1] ""
+"\n"
+"         %(counter)s Rezultati\n"
+"        "
+msgstr[2] ""
+"\n"
+"         %(counter)s Rezultati\n"
+"        "
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "\tResults %(start)s-%(end)s of %(count)s\n"
+#| "\t"
+msgid ""
+"\n"
+"             Results %(start)s-%(end)s of %(count)s\n"
+"           "
+msgstr ""
+"\n"
+"\tRezultati %(start)s-%(end)sod %(count)s"
+
+msgid "Error"
+msgstr ""
+
+msgid "Enter Dashboard"
+msgstr ""
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "      Sorry, you cannot log in at this time because we received %(failed_login_limit)s incorrect login attempts.\n"
+#| "      "
+msgid ""
+"\n"
+"                Sorry, you cannot log in at this time because we received %(failed_login_limit)s incorrect login attempts.\n"
+"              "
+msgstr ""
+"\n"
+"Žao nam je, ne možete se prijaviti zbog %(failed_login_limit)spogrešnih pokušaja prijave."
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "      Please wait %(lockout_timeout)s minutes before to try log in again.\n"
+#| "      "
+msgid ""
+"\n"
+"                    Please wait %(lockout_timeout)s minutes before to try log in again.\n"
+"                  "
+msgstr ""
+"\n"
+"Molimo sačekajte %(lockout_timeout)s minuta pre ponovnog pokušaja prijave."
+
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "  <strong>Your password has expired.</strong> Site policy states that you must pick a new password every %(expire_days)s days, and that passwords must not have been used within the previous %(window_days)s days.\n"
+#| "  "
+msgid ""
+"\n"
+"        <strong>Your password has expired.</strong> Site policy states that you must pick a new password every %(expire_days)s days, and that passwords must not have been used within the previous %(window_days)s days.\n"
+"      "
+msgstr ""
+"\n"
+"<strong>Lozinka vam je istekla. </strong> Morate da obnovite lozinku svakih %(expire_days)sdana, a lozinka ne sme biti ista kao ona koju ste koristili u poslednjih %(window_days)s dana."
+
+msgid "+ New Story"
+msgstr ""
 
 #, python-format
 msgid "Refreshed %s cache for this organization"
@@ -1366,6 +1695,16 @@ msgstr "Slika iz splash kategorije koja se može prikazati uz anketu (opciono)"
 msgid "The organization this poll is part of"
 msgstr "Organizacija kojoj anketa pripada"
 
+#, fuzzy
+#| msgid "The title for this story"
+msgid "The title for this response story"
+msgstr "Naslov priče"
+
+#, fuzzy
+#| msgid "The writer of the story"
+msgid "The writer of the response story"
+msgstr "Autor priče"
+
 msgid "The poll to associate to"
 msgstr "Anketa uz koju se vezuje"
 
@@ -1444,32 +1783,13 @@ msgstr "Slika koja će se prikazati na strani ankete i u pregledima (opciono)"
 msgid "Image to display on poll page and in previews (optional)"
 msgstr "Slika koja će se prikazati na strani ankete i u pregledima (opciono)"
 
-msgid "Featured Poll Responses"
-msgstr "Karakteristični odgovori iz ankete"
+#, fuzzy
+#| msgid "Poll Questions"
+msgid "Poll Response"
+msgstr "Anketna pitanja"
 
 msgid "Your poll has been updated."
 msgstr "Vaša anketa je ažurirana"
-
-#, python-format
-msgid "Response %d Reporter"
-msgstr "Odgovor %dReporter"
-
-msgid "The name or alias of the responder."
-msgstr "Ime ili pseudonim ispitanika"
-
-#, python-format
-msgid "Response %d Location"
-msgstr "Odgovor %d Lokacija"
-
-msgid "The location of the responder."
-msgstr "Lokacija ispitanika"
-
-#, python-format
-msgid "Response %d Message"
-msgstr "Odgovor %d Poruka"
-
-msgid "The text of the featured response."
-msgstr "Tekst objavljenih karakterističnih odgovora"
 
 msgid "Poll Questions"
 msgstr "Anketna pitanja"
@@ -1546,8 +1866,66 @@ msgstr "Treba li se ova org prikazati na odredišnoj stranici"
 msgid "The shortcode that users will use to contact U-Report locally"
 msgstr "Kratki kod koji će korisnici koristiti da kontaktiraju U-Report lokalno"
 
+#, fuzzy
+#| msgid "The shortcode that users will use to contact U-Report locally"
+msgid "The whatapp number that users will use to contact U-Report if you have one"
+msgstr "Kratki kod koji će korisnici koristiti da kontaktiraju U-Report lokalno"
+
 msgid "The short text used to direct visitors to join U-Report"
 msgstr "Kratak tekst kojim se posetioci upućuju da se pridruže U-Reportu"
+
+msgid "The YouTube video ID for how to join U-Report section"
+msgstr ""
+
+msgid "The title of the photos section U-Report homepage"
+msgstr ""
+
+msgid "The description of the photos section U-Report homepage"
+msgstr ""
+
+#, fuzzy
+#| msgid "The location of the responder."
+msgid "The description of the opinions page"
+msgstr "Lokacija ispitanika"
+
+#, fuzzy
+#| msgid "The location of the responder."
+msgid "The description of the stories page"
+msgstr "Lokacija ispitanika"
+
+msgid "The description of the engagement page"
+msgstr ""
+
+msgid "The callout message on the footer engagement section"
+msgstr ""
+
+#, fuzzy
+#| msgid "The primary color for styling for this organization"
+msgid "The primary color for styling for this organization, should be dark"
+msgstr "Primarna boja za ovu postavku"
+
+#, fuzzy
+#| msgid "The secondary color for styling for this organization"
+msgid "The secondary color for styling for this organization, should be dark"
+msgstr "Sekundarna boja za ovu postavku"
+
+#, fuzzy
+#| msgid "The primary color for styling for this organization"
+msgid "The tertiary color for styling for this organization, should be dark"
+msgstr "Primarna boja za ovu postavku"
+
+#, fuzzy
+#| msgid "The primary color for styling for this organization"
+msgid "The primary highlight color for styling for this organization, should be light"
+msgstr "Primarna boja za ovu postavku"
+
+#, fuzzy
+#| msgid "The secondary color for styling for this organization"
+msgid "The secondary highlight color for styling for this organization, should be light"
+msgstr "Sekundarna boja za ovu postavku"
+
+msgid "Up to 6 colors for styling charts, use comma between colors"
+msgstr "Do 6 boja za stilizovanje grafika, koristite zarez izmedju boja"
 
 msgid "The color used to draw the text on the join bar"
 msgstr "Boja za pisanje teksta na polju za pridruživanje"
@@ -1563,9 +1941,6 @@ msgstr "Sekundarna boja za ovu postavku"
 
 msgid "The background color for the site"
 msgstr "Pozadinska boja ove stranice"
-
-msgid "Up to 6 colors for styling charts, use comma between colors"
-msgstr "Do 6 boja za stilizovanje grafika, koristite zarez izmedju boja"
 
 #, fuzzy
 #| msgid "Up to 6 colors for styling charts, use comma between colors"
@@ -1621,6 +1996,12 @@ msgstr "Ako postoje zadaci koje treba prikazati na javnoj stranici"
 msgid "If this org if for global data. e.g: It shows a world map instead of a country map."
 msgstr "Da li ova postavka uključuje globalne podatke, npr. mapu sveta umesto mape države."
 
+msgid "Whether to activate an extra gender."
+msgstr ""
+
+msgid "Whether to activate the new design."
+msgstr ""
+
 msgid "The alpha-3 ISO code of the organization so that it appears the stories widget U-Report App. Example: BRA, NIG, CMR (Use GLOBAL if U-Report is Global)."
 msgstr "Alpha-3 ISO kod organizacije koji će inicirati widget priče U-Report aplikacije. Primer: BRA, NIG, CMR (Koristite GLOBAL ako je U-Report globalan)."
 
@@ -1646,8 +2027,118 @@ msgstr ""
 msgid "If you need to include some custom HTML codes in you org pages, like custom analytics code snippets"
 msgstr "Ako treba uključiti prilagođeni HTML kod u vaše org stranice, poput prilagođenih analitičkih snippet kodova"
 
+msgid "90 Days"
+msgstr ""
+
+msgid "6 Months"
+msgstr ""
+
+msgid "12 Months"
+msgstr ""
+
+msgid "Age"
+msgstr ""
+
+#, fuzzy
+#| msgid "Population"
+msgid "Location"
+msgstr "Populacija"
+
+#, fuzzy
+#| msgid "Responses"
+msgid "Opinion Responses"
+msgstr "Odgovori"
+
+msgid "Sign Up Rate"
+msgstr ""
+
+msgid "Active Users"
+msgstr ""
+
 msgid "Something to trigger localizations"
 msgstr "Nešto što inicira lokalizaciju"
+
+#~ msgid "Featured Poll Responses"
+#~ msgstr "Karakteristični odgovori iz ankete"
+
+#, python-format
+#~ msgid "Response %d Reporter"
+#~ msgstr "Odgovor %dReporter"
+
+#~ msgid "The name or alias of the responder."
+#~ msgstr "Ime ili pseudonim ispitanika"
+
+#, python-format
+#~ msgid "Response %d Location"
+#~ msgstr "Odgovor %d Lokacija"
+
+#~ msgid "The location of the responder."
+#~ msgstr "Lokacija ispitanika"
+
+#, python-format
+#~ msgid "Response %d Message"
+#~ msgstr "Odgovor %d Poruka"
+
+#~ msgid "The text of the featured response."
+#~ msgstr "Tekst objavljenih karakterističnih odgovora"
+
+#, fuzzy, python-format
+#~| msgid ""
+#~| "\n"
+#~| "                    %(responded)s responded out of %(polled)s polled\n"
+#~| "                  "
+#~ msgid ""
+#~ "\n"
+#~ "                  %(responded)s responded out of %(polled)s polled\n"
+#~ "                "
+#~ msgstr ""
+#~ "\n"
+#~ "%(responded)sodgovorilo od %(polled)sispitanih"
+
+#, fuzzy
+#~| msgid "U-REPORTERS IN"
+#~ msgid "TOTAL U-REPORTERS IN"
+#~ msgstr "U-REPORTERI U"
+
+#, fuzzy
+#~| msgid "Join & Engage"
+#~ msgid "Engage"
+#~ msgstr "Pridruži se i angažuj"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "                  %(questions)s question polled on this topic\n"
+#~| "                "
+#~| msgid_plural ""
+#~| "\n"
+#~| "                  %(questions)s questions polled on this topic\n"
+#~| "                "
+#~ msgid ""
+#~ "\n"
+#~ "          %(questions)s question\n"
+#~ "        "
+#~ msgid_plural ""
+#~ "\n"
+#~ "          %(questions)s questions\n"
+#~ "        "
+#~ msgstr[0] ""
+#~ "\n"
+#~ "                  %(questions)s pitanje postavljeno na ovu temu\n"
+#~ "                "
+#~ msgstr[1] ""
+#~ "\n"
+#~ "                  %(questions)s broj pitanja postavljenih na ovu temu\n"
+#~ "                "
+#~ msgstr[2] ""
+#~ "\n"
+#~ "                  %(questions)s pitanja postavljenih na ovu temu\n"
+#~ "                "
+
+#, fuzzy
+#~| msgid "FILTERED BY"
+#~ msgid "FILTER BY:"
+#~ msgstr "FILTRIRANO PO"
 
 #~ msgid "The API token for the RapidPro account this dashboard is tied to"
 #~ msgstr "API token za Rapid Pro nalog, za koji je ovaj dashbord vezan"

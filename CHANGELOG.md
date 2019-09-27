@@ -1,3 +1,212 @@
+v1.1.66
+----------
+ * Fix polls maps
+
+v1.1.65
+----------
+ * Use center bottom to redraw
+
+v1.1.64
+----------
+ * Use top-bottom anchor to trigger redraw
+
+v1.1.63
+----------
+ * Merge pull request #479 from rapidpro/beta-fixes
+
+v1.1.61
+----------
+ * Hide photos section if no photos can be displayed
+
+v1.1.60
+----------
+ * Merge pull request #478 from rapidpro/beta-fixes
+ * Add select country image
+ * Add select country image
+ * Update CHANGELOG.md for v1.1.59
+ * Merge pull request #476 from rapidpro/beta-fixes
+
+v1.1.59
+----------
+ * Merge pull request #476 from rapidpro/beta-fixes
+ * Move anchor placement to top center for aos and trigger redraw fast
+ * Add migration to add photo blocks type
+ * Rebuild locales
+
+v1.1.47
+----------
+ * Adjuts jobs page
+ * Larger circles
+ * Merge pull request #473 from rapidpro/beta-fixes
+ * Refresh AOS
+
+v1.1.45
+----------
+ * Merge pull request #472 from rapidpro/fix-stats
+ * Merge branch 'master' of github.com:rapidpro/ureport into fix-stats
+ * Merge pull request #471 from rapidpro/poll-date-api
+ * Merge pull request #470 from rapidpro/beta-fixes
+ * Add timeout to lock of poll counts rebuild
+ * Add poll date to API
+
+v1.1.38
+----------
+ * Show top region on maps
+ * state pill label to STATE
+ * lighten button backgrounds on hover
+ * Fix social media switching buttons
+ * Reduce line height on poll title on homepage
+ * Add bottom border on navbar
+
+v1.1.37
+----------
+ * Merge pull request #469 from rapidpro/beta-fixes
+ * Fix crop argument
+ * Add spinner on maps before they load
+ * Full width on engagement page
+ * Adjust label font weight on opinions page
+ * Hide question number on screenshot capture
+
+v1.1.36
+----------
+ * Merge pull request #467 from rapidpro/edit-blocks
+ * Fix tests
+ * Merge pull request #465 from rapidpro/translations_djangojs-po--master_my
+ * Translate locale/en/LC_MESSAGES/djangojs.po in my
+
+v1.1.34
+----------
+ * Increment after using the color
+
+v1.1.33
+----------
+ * Merge pull request #466 from rapidpro/beta-fixes
+ * Fix conflicting colors for state segmentation
+
+v1.1.27
+----------
+ * Fix admin navbar
+
+v1.1.26
+----------
+ * Quick fixes
+
+v1.1.25
+----------
+ * Merge pull request #461 from rapidpro/RTL-support
+ * Merge pull request #462 from rapidpro/use-cached-results
+ * Really fix conflicts and merge
+ * Use cached results
+ * Use cached results
+ * fix conflicts and merge
+ * update locales
+ * tweak styles for admin nav
+
+v1.1.19
+----------
+ * Add social media tab icons
+
+v1.1.18
+----------
+ * Align text in the left boxes with the left angle applied too
+
+v1.1.17
+----------
+ * Merge pull request #458 from rapidpro/engagement-charts
+
+v1.1.8
+----------
+ * Adjust cursor and sticky bar
+ * Merge pull request #451 from rapidpro/layout-tweaks
+ * age graph pane only 1/2
+ * livvic as alt font
+ * montserrat as alt font
+ * fix mobile menu spacing
+ * about page
+ * new global layouts
+ * new layouyg
+ * transition menu with slide
+
+v1.1.6
+----------
+
+
+v1.1.5
+----------
+ * Merge pull request #444 from rapidpro/admin-nav-public-site
+ * labels for age charts
+ * Extra utility classes for the admin menu links
+ * better segmented labeling
+ * fix top logo
+ * rebuild locales
+ * Add admin navbar on top on public site
+ * Merge branch 'master' of github.com:rapidpro/ureport into admin-nav-public-site
+ * Merge pull request #443 from rapidpro/locale-fix
+ * Makemessages and compile messages
+ * WIP admin navbar for public site
+ * Merge branch 'master' of github.com:rapidpro/ureport into locale-fix
+ * Makemessages and compile messages
+ * Merge pull request #442 from rapidpro/uikit
+ * Rebuild locale
+ * Merge pull request #428 from rapidpro/css-tweaks
+ * Merge pull request #441 from rapidpro/tailwind-design
+ * Fix SASS countries background
+ * Only allow search engines on the rigth domains
+ * Merge master
+ * Update CHANGELOG.md for v1.1.4
+ * Merge pull request #440 from rapidpro/fix-org-counts
+ * Fix contacts triggers to not consider contacts with is_active False
+ * Fix recalculate to ignore contact not active
+ * Update CHANGELOG.md for v1.1.3
+ * Merge pull request #436 from rapidpro/revert-maps-file
+ * Fix script name
+ * Revert leaflet library
+ * Revert maps change to keep supporting properly the old version
+ * Update CHANGELOG.md for v1.1.2
+ * Ignore node_mudules
+ * Merge pull request #434 from rapidpro/fix-design
+ * Fix endif tag place
+ * Update CHANGELOG.md for v1.1.1
+ * Merge pull request #433 from rapidpro/post-deploy-fixes
+ * More adjustements
+ * Remove placeholders and adjust logos
+ * Update CHANGELOG.md for v1.1.0
+ * Merge pull request #432 from rapidpro/uikit
+
+v1.1.4
+----------
+ * Fix contacts triggers to not consider contacts with is_active False
+ * Fix recalculate to ignore contact not active
+
+v1.1.3
+----------
+ * Revert leaflet library
+ * Revert maps change to keep supporting properly the old version
+
+v1.1.2
+----------
+ * Ignore node_mudules
+ * Fix endif tag place
+
+v1.1.1
+----------
+ * Merge pull request #433 from rapidpro/post-deploy-fixes
+ * More adjustements
+ * Remove placeholders and adjust logos
+
+v1.1.0
+----------
+ * Merge pull request #432 from rapidpro/uikit
+
+v1.0.459
+----------
+ * Fix staging DATABASES config
+
+v1.0.458
+----------
+ * Merge pull request #420 from rapidpro/contact-activity
+ * Merge pull request #419 from rapidpro/poll-stats
+
 v1.0.457
 ----------
  * Merge pull request #415 from rapidpro/fix-global-locations-data
