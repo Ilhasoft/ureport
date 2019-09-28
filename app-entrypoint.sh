@@ -2,7 +2,7 @@
 cd $WORKDIR
 
 echo "Collect static files"
-python manage.py collectstatic --noinput --dry-run
+python manage.py collectstatic --noinput
 
 echo "Compress static files"
 python manage.py compress --extension=.haml,.html
