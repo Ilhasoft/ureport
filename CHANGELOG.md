@@ -1,3 +1,28 @@
+v1.1.71
+----------
+ * Merge pull request #482 from rapidpro/beta-fixes
+ * Rebuild locales
+ * Fix modal scrolling behavior
+
+v1.1.70
+----------
+ * Allow status view without org
+
+v1.1.69
+----------
+ * Merge pull request #481 from rapidpro/status-view
+ * Add status view
+
+v1.1.68
+----------
+ * Merge pull request #480 from rapidpro/beta-fixes
+ * consistent read more button
+ * Fix stories button hover state, and screenshot modal z-index
+
+v1.1.67
+----------
+ * Screenshot modal position
+
 v1.1.66
 ----------
  * Fix polls maps
