@@ -174,7 +174,7 @@ PREVIOUS_ORG_SITES = [
         'name': s.strip().split(',')[0],
         'host': 'https://{}'.format(s.strip().split(',')[1]),
         'flag': 'https://{}.s3.amazonaws.com/images/{}'.format(s.strip().split(',')[2], s.strip().split(',')[3]),
-        'count_link': 'https://{}/count/'.format(s.strip().split(',')[1]),
+        'count_link': s.strip().split(',')[4],
         'is_static': False,
     } for s in config('PREVIOUS_ORG_SITES').split('|')] if config('PREVIOUS_ORG_SITES') else []
 
