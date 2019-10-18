@@ -171,6 +171,20 @@ COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']
 
 PREVIOUS_ORG_SITES = [
     dict(
+        name='24x7',
+        host='https://nigeria24x7.ureport.in/',
+        flag='https://rapidpro-static-data.s3-eu-west-1.amazonaws.com/flag_24x7.png',
+        is_static=False,
+        count_link='https://nigeria24x7.ureport.in/count/',
+    ),
+    dict(
+        name='Botswana',
+        host='https://botswana.ureport.in/',
+        flag='https://rapidpro-static-data.s3-eu-west-1.amazonaws.com/Icon_Country+Name_RGB.png',
+        is_static=False,
+        count_link='https://botswana.ureport.in/count/',
+    ),
+    dict(
         name='Burkina Faso',
         host='https://burkinafaso.ureport.in/',
         flag='https://{}.s3.amazonaws.com/images/{}'.format('dl-ureport', 'U-Report_Burkina_Faso_Landing_Page_Icon.png'),
@@ -206,11 +220,32 @@ PREVIOUS_ORG_SITES = [
         count_link='https://chile.ureport.in/count/',
     ),
     dict(
+        name='Congo Brazzavile',
+        host='https://congobrazzaville.ureport.in',
+        flag='https://{}.s3.amazonaws.com/images/{}'.format('dl-ureport', 'Congo_Brazzaville.png'),
+        is_static=False,
+        count_link='https://congobrazzaville.ureport.in/count/',
+    ),
+    dict(
         name='Cote dIvoire',
         host='https://cotedivoire.ureport.in',
         flag='https://{}.s3.amazonaws.com/images/{}'.format('dl-ureport', 'U-Report_Cote_dIvoire_Landing_Page_Icon.png'),
         is_static=False,
-        count_link='https://cotedivoire.ureport.in/',
+        count_link='https://cotedivoire.ureport.in/count/',
+    ),
+    dict(
+        name='RD Congo',
+        host='https://drc.ureport.in',
+        flag='https://{}.s3.amazonaws.com/images/{}'.format('dl-ureport', 'Congo.png'),
+        is_static=False,
+        count_link='https://drc.ureport.in/count/',
+    ),
+    dict(
+        name='Global',
+        host='https://ureport.in/',
+        flag='https://rapidpro-static-data.s3-eu-west-1.amazonaws.com/global.png',
+        is_static=False,
+        count_link='https://ureport.in/count/',
     ),
     dict(
         name='Guinea',
@@ -401,6 +436,13 @@ PREVIOUS_ORG_SITES = [
         count_link='https://ghana.ureport.in/count/',
     ),
     dict(
+        name='Fiji',
+        host='https://fiji.ureport.in',
+        flag='https://{}.s3.amazonaws.com/images/{}'.format('dl-ureport', 'flag_fj.png'),
+        is_static=False,
+        count_link='https://fiji.ureport.in/count/',
+    ),
+    dict(
         name='Eswatini',
         host='https://eswatini.ureport.in',
         flag='https://{}.s3.amazonaws.com/images/{}'.format('dl-ureport', 'Eswatini_Web_Deployment-01.png'),
@@ -420,6 +462,34 @@ PREVIOUS_ORG_SITES = [
         flag='https://{}.s3.amazonaws.com/images/{}'.format('dl-ureport', 'Haiti_Web_Deployment-01.png'),
         is_static=False,
         count_link='https://haiti.ureport.in/count/',
+    ),
+    dict(
+        name='Jordan',
+        host='https://jordan.ureport.in',
+        flag='https://rapidpro-static-data.s3-eu-west-1.amazonaws.com/flag_jo.png',
+        is_static=False,
+        count_link='https://jordan.ureport.in/count/',
+    ),
+    dict(
+        name='Mauritanie',
+        host='https://mauritania.ureport.in',
+        flag='https://rapidpro-static-data.s3-eu-west-1.amazonaws.com/flag_mr.png',
+        is_static=False,
+        count_link='https://mauritania.ureport.in/count/',
+    ),
+    dict(
+        name='Nepal',
+        host='https://nepal.ureport.in',
+        flag='https://{}.s3.amazonaws.com/images/{}'.format('dl-ureport', 'flag_np.png'),
+        is_static=False,
+        count_link='https://nepal.ureport.in/count/',
+    ),
+    dict(
+        name='Pacific',
+        host='https://pacific.ureport.in',
+        flag='https://rapidpro-static-data.s3-eu-west-1.amazonaws.com/flag_pacific.png',
+        is_static=False,
+        count_link='https://pacific.ureport.in/count/',
     ),
 ]
 
