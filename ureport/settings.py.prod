@@ -312,7 +312,7 @@ PREVIOUS_ORG_SITES = [
     ),
     dict(
         name='Pakistan',
-        host='http//ureport.pk/',
+        host='http://ureport.pk/',
         flag='https://{}.s3.amazonaws.com/images/{}'.format('dl-ureport', 'U-Report_Pakistan_Landing_Page_Icon.png'),
         is_static=False,
         count_link='http://ureport.pk/count/',
@@ -336,11 +336,11 @@ PREVIOUS_ORG_SITES = [
         host='https://sierraleone.ureport.in/',
         flag='https://{}.s3.amazonaws.com/images/{}'.format('dl-ureport', 'flag_sl.png'),
         is_static=False,
-        count_link='https://sierraleone.ureport.in/',
+        count_link='https://sierraleone.ureport.in/count/',
     ),
     dict(
         name='Uganda',
-        host='http://ureport.ug.in/',
+        host='http://ureport.ug',
         flag='https://{}.s3.amazonaws.com/images/{}'.format('dl-ureport', 'U-Report_Uganda_Landing_Page_Icon.png'),
         is_static=False,
         count_link='http://ureport.ug/count/',
@@ -361,9 +361,10 @@ PREVIOUS_ORG_SITES = [
     ),
     dict(
         name='Zambia',
-        host='https://zambiaureport.org/',
+        host='http://zambiaureport.org/',
         flag='https://zambia.ureport.in/sitestatic/img/flags/flag_zm.png',
         is_static=False,
+        count_link="https://www.zambiaureport.com/count.txt/",
     ),
     dict(
         name='Zimbabwe',
