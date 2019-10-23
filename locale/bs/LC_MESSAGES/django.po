@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UReport\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 16:33+0000\n"
+"POT-Creation-Date: 2019-10-23 16:25+0000\n"
 "PO-Revision-Date: 2018-09-14 11:15+0000\n"
 "Last-Translator: Nineta Popovic <npopovic@unicef.org>\n"
 "Language-Team: Bosnian (http://www.transifex.com/rapidpro/ureport/language/bs/)\n"
@@ -1257,6 +1257,79 @@ msgstr "U-Reporteri"
 msgid "Top Region"
 msgstr ""
 
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+#, fuzzy
+#| msgid "Search"
+msgid "March"
+msgstr "Traži"
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Jan"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "Mar"
+msgstr ""
+
+msgid "Apr"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "Aug"
+msgstr ""
+
+msgid "Sep"
+msgstr ""
+
+msgid "Oct"
+msgstr ""
+
+#, fuzzy
+#| msgid "No"
+msgid "Nov"
+msgstr "Ne"
+
+msgid "Dec"
+msgstr ""
+
 #, fuzzy
 #| msgid "LOCATIONS"
 msgid "LATEST OPINION"
@@ -1821,6 +1894,11 @@ msgstr "Oznaka koja se dodjeljuje U-Reporterima ženskog spola"
 
 msgid "Whether this org should be show on the landing page"
 msgstr "Treba li se ova org prikazati na odredišnoj stranici"
+
+#, fuzzy
+#| msgid "Whether this content should include a link"
+msgid "Whether this org count should consider the count from link only"
+msgstr "Hoće li ovaj sadržaj uključivati linkove"
 
 msgid "The shortcode that users will use to contact U-Report locally"
 msgstr "Kratki kod koji će korisnici koristiti da kontaktiraju U-Report lokalno"

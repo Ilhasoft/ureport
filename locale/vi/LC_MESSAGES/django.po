@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UReport\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 16:33+0000\n"
+"POT-Creation-Date: 2019-10-23 16:25+0000\n"
 "PO-Revision-Date: 2017-11-07 07:04+0000\n"
 "Last-Translator: Brian Cotter <brian_d_cotter@yahoo.com>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/rapidpro/ureport/language/vi/)\n"
@@ -1266,6 +1266,79 @@ msgstr "U-Reporters"
 msgid "Top Region"
 msgstr ""
 
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+#, fuzzy
+#| msgid "Search"
+msgid "March"
+msgstr "Tìm kiếm"
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Jan"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "Mar"
+msgstr ""
+
+msgid "Apr"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "Aug"
+msgstr ""
+
+msgid "Sep"
+msgstr ""
+
+msgid "Oct"
+msgstr ""
+
+#, fuzzy
+#| msgid "No"
+msgid "Nov"
+msgstr "Không"
+
+msgid "Dec"
+msgstr ""
+
 #, fuzzy
 #| msgid "LOCATIONS"
 msgid "LATEST OPINION"
@@ -1838,6 +1911,11 @@ msgstr "Nhãn được gán cho các U-Reporters nữ."
 
 msgid "Whether this org should be show on the landing page"
 msgstr "Liệu tổ chức này có cần được hiện diện ở trang đích"
+
+#, fuzzy
+#| msgid "Whether this content should include a link"
+msgid "Whether this org count should consider the count from link only"
+msgstr "Nội dung này có nên bao gồm liên kết hay không"
 
 msgid "The shortcode that users will use to contact U-Report locally"
 msgstr "Mã ngắn mà người dùng sẽ sử dụng để liên hệ với U-Report tại địa phương"

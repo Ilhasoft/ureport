@@ -143,6 +143,7 @@ REDIS_HOST = config('REDIS_HOST')
 REDIS_DATABASE = config('REDIS_DATABASE', default='1')
 # compress arguments
 COMPRESS_CSS_HASHING_METHOD = 'content'
+COMPRESS_OFFLINE = True
 COMPRESS_OFFLINE_CONTEXT = 'ureport.utils.offline_context'
 
 BROKER_URL = 'redis://{}:6379/{}'.format(REDIS_HOST, REDIS_DATABASE)

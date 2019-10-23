@@ -1,3 +1,109 @@
+v1.1.105
+----------
+ * Rebuild locales
+ * Rebuild locales
+ * Merge pull request #509 from rapidpro/translations_django-po--master_bn
+ * Translate /locale/en/LC_MESSAGES/django.po in bn
+ * Merge pull request #508 from rapidpro/max-upload-size
+ * Increase max size allowed to upload to 10MB
+
+v1.1.104
+----------
+ * Merge pull request #507 from rapidpro/limit-opinion-responses-by-date
+ * Precalculate the avearage response for the engagement page
+
+v1.1.103
+----------
+ * Merge pull request #506 from rapidpro/limit-opinion-responses-by-date
+ * Limit all opinions response to the last year
+
+v1.1.102
+----------
+ * Merge pull request #504 from rapidpro/counters-config
+ * Merge pull request #505 from rapidpro/fix-countries-number
+ * Add way to sync counts from all providers for orgs that do not display flags
+ * Update rebuild counts to include older polls too
+ * Fix the query for number for countries on homepage
+
+v1.1.101
+----------
+ * Fix Facebook share URL
+
+v1.1.100
+----------
+ * Merge pull request #503 from rapidpro/translations-1
+ * Add callback for summernote to hints user the file is big
+ * Rebuild locales
+ * Rebuild locales
+ * Add translations manually
+
+v1.1.99
+----------
+ * Add tests
+ * Fix poll stats without date
+
+v1.1.98
+----------
+ * Merge pull request #502 from rapidpro/add-indexes
+
+v1.1.96
+----------
+ * Disable the squash for reporters counters
+
+v1.1.95
+----------
+ * Refresh engagement data once a day
+
+v1.1.94
+----------
+ * Add overflow scroll on longer labels
+
+v1.1.93
+----------
+ * Use HTML for hightcharts labels
+
+v1.1.92
+----------
+ * Merge pull request #501 from rapidpro/calculate-results-poll-stats-2
+ * Show day in tooltip date
+ * Show day in tooltip date
+ * Show up to 3 points per month for 3 months charts
+ * Merge branch 'calculate-results-poll-stats' of github.com:rapidpro/ureport into calculate-results-poll-stats-2
+ * Merge branch 'master' of github.com:rapidpro/ureport into calculate-results-poll-stats-2
+ * Fix date key lookup
+ * Use smaller intervals for small time filters on engagement
+
+v1.1.90
+----------
+ * Merge pull request #484 from rapidpro/calculate-results-poll-stats
+
+v1.1.89
+----------
+ * Add back some hover background with static colors
+ * Rebuild locales
+
+v1.1.88
+----------
+ * Rebuild locales
+ * Merge pull request #500 from rapidpro/avoid-compressor-context-loop
+ * Rebuild locales
+ * More charts localizations
+ * Fix typo
+ * Add if block for admin site
+
+v1.1.83
+----------
+
+
+v1.1.82
+----------
+ * Fix links
+
+v1.1.81
+----------
+ * Merge pull request #499 from rapidpro/stories-og-tags
+ * Add open graph tags for facebook image sharing on story page
+
 v1.1.80
 ----------
  * Rebuild locales

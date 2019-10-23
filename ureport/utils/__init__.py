@@ -69,6 +69,37 @@ def get_last_months(months_num=12, start_time=None):
     return months
 
 
+def get_time_filter_dates_map(time_filter=12):
+    start_time = datetime.now()
+    end_time = start_time - timedelta(days=time_filter * 30)
+
+    if time_filter != 3:
+        end_time = end_time.replace(day=1)
+
+    keys_map = dict()
+    while start_time >= end_time:
+        val = start_time.date()
+        if time_filter == 12:
+            val = start_time.date().replace(day=1)
+        if time_filter == 6:
+            if val.day < 16:
+                val = start_time.date().replace(day=1)
+            else:
+                val = start_time.date().replace(day=16)
+        if time_filter == 3:
+            if val.day < 11:
+                val = start_time.date().replace(day=1)
+            elif val.day < 21:
+                val = start_time.date().replace(day=11)
+            else:
+                val = start_time.date().replace(day=21)
+
+        keys_map[str(start_time.date())] = str(val)
+        start_time = start_time - timedelta(days=1)
+
+    return keys_map
+
+
 def get_dict_from_cursor(cursor):
     """
     Returns all rows from a cursor as a dict
@@ -200,7 +231,9 @@ def fetch_old_sites_count():
 
     start = time.time()
     this_time = datetime.now()
-    linked_sites = list(getattr(settings, "PREVIOUS_ORG_SITES", []))
+    linked_sites = list(getattr(settings, "PREVIOUS_ORG_SITES", [])) + list(
+        getattr(settings, "OTHER_ORG_COUNT_SITES", [])
+    )
 
     old_site_values = []
 
@@ -246,7 +279,7 @@ def get_global_count():
         count = sum([elt["results"].get("size", 0) for elt in cached_values if elt.get("results", None)])
 
         for org in Org.objects.filter(is_active=True):
-            if org.get_config("common.is_on_landing_page"):
+            if org.get_config("common.is_on_landing_page") and not org.get_config("has_count_on_link_only"):
                 count += get_reporters_count(org)
 
         # cached for 10 min
@@ -368,16 +401,19 @@ def get_sign_up_rate(org, time_filter):
 
     interval_dict = defaultdict(int)
 
+    dates_map = get_time_filter_dates_map(time_filter=time_filter)
+    keys = list(set(dates_map.values()))
+
     for date_key, date_count in registered_on_counts.items():
         parsed_time = tz.localize(datetime.strptime(date_key, "%Y-%m-%d")).replace(
-            day=1, hour=0, minute=0, second=0, microsecond=0
+            hour=0, minute=0, second=0, microsecond=0
         )
 
         if parsed_time > start:
+            key = dates_map.get(str(parsed_time.date()))
 
-            interval_dict[str(parsed_time.date())] += date_count
+            interval_dict[key] += date_count
 
-    keys = get_last_months(months_num=time_filter)
     data = dict()
     for key in keys:
         data[key] = interval_dict[key]
@@ -397,7 +433,9 @@ def get_sign_up_rate_location(org, time_filter):
 
     top_boundaries = Boundary.get_org_top_level_boundaries_name(org)
 
-    keys = get_last_months(months_num=time_filter)
+    dates_map = get_time_filter_dates_map(time_filter=time_filter)
+    keys = list(set(dates_map.values()))
+
     output_data = []
 
     for osm_id, name in top_boundaries.items():
@@ -409,11 +447,12 @@ def get_sign_up_rate_location(org, time_filter):
                 continue
 
             parsed_time = tz.localize(datetime.strptime(date_key, "%Y-%m-%d")).replace(
-                day=1, hour=0, minute=0, second=0, microsecond=0
+                hour=0, minute=0, second=0, microsecond=0
             )
 
             if parsed_time > start:
-                interval_dict[str(parsed_time.date())] += date_count
+                key = dates_map.get(str(parsed_time.date()))
+                interval_dict[key] += date_count
 
         data = dict()
         for key in keys:
@@ -438,7 +477,8 @@ def get_sign_up_rate_gender(org, time_filter):
 
     genders = genders.values("gender", "id")
 
-    keys = get_last_months(months_num=time_filter)
+    dates_map = get_time_filter_dates_map(time_filter=time_filter)
+    keys = list(set(dates_map.values()))
     output_data = []
 
     for gender in genders:
@@ -450,11 +490,12 @@ def get_sign_up_rate_gender(org, time_filter):
                 continue
 
             parsed_time = tz.localize(datetime.strptime(date_key, "%Y-%m-%d")).replace(
-                day=1, hour=0, minute=0, second=0, microsecond=0
+                hour=0, minute=0, second=0, microsecond=0
             )
 
             if parsed_time > start:
-                interval_dict[str(parsed_time.date())] += date_count
+                key = dates_map.get(str(parsed_time.date()))
+                interval_dict[key] += date_count
 
         data = dict()
         for key in keys:
@@ -481,15 +522,19 @@ def get_sign_up_rate_age(org, time_filter):
         "31-34": defaultdict(int),
         "35+": defaultdict(int),
     }
+
+    dates_map = get_time_filter_dates_map(time_filter=time_filter)
+    keys = list(set(dates_map.values()))
+
     for date_key, date_count in registered_on_counts.items():
         date_key_date, date_key_year = date_key.split(":")
         parsed_time = tz.localize(datetime.strptime(date_key_date, "%Y-%m-%d")).replace(
-            day=1, hour=0, minute=0, second=0, microsecond=0
+            hour=0, minute=0, second=0, microsecond=0
         )
         if parsed_time < start:
             continue
 
-        date_key_date = str(parsed_time.date())
+        date_key_date = dates_map.get(str(parsed_time.date()))
 
         age = current_year - int(date_key_year)
         if age > 34:
@@ -506,7 +551,6 @@ def get_sign_up_rate_age(org, time_filter):
             registered_on_counts_by_age["0-14"][date_key_date] += date_count
 
     ages = AgeSegment.objects.all().values("id", "min_age", "max_age")
-    keys = get_last_months(months_num=time_filter)
     output_data = []
     for age in ages:
         if age["min_age"] == 0:
@@ -776,7 +820,7 @@ def get_segment_org_boundaries(org, segment):
         if state_id:
             location_boundaries = (
                 org.boundaries.filter(level=Boundary.DISTRICT_LEVEL, is_active=True, parent__osm_id=state_id)
-                .values("osm_id", "name")
+                .values("id", "osm_id", "name")
                 .order_by("osm_id")
             )
 
@@ -785,7 +829,7 @@ def get_segment_org_boundaries(org, segment):
         if district_id:
             location_boundaries = (
                 org.boundaries.filter(level=Boundary.WARD_LEVEL, is_active=True, parent__osm_id=district_id)
-                .values("osm_id", "name")
+                .values("id", "osm_id", "name")
                 .order_by("osm_id")
             )
 
@@ -793,13 +837,13 @@ def get_segment_org_boundaries(org, segment):
         if org.get_config("common.is_global"):
             location_boundaries = (
                 org.boundaries.filter(level=Boundary.COUNTRY_LEVEL, is_active=True)
-                .values("osm_id", "name")
+                .values("id", "osm_id", "name")
                 .order_by("osm_id")
             )
         else:
             location_boundaries = (
                 org.boundaries.filter(level=Boundary.STATE_LEVEL, is_active=True)
-                .values("osm_id", "name")
+                .values("id", "osm_id", "name")
                 .order_by("osm_id")
             )
 

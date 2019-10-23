@@ -159,6 +159,8 @@ DATA_API_BACKEND_TYPES = (
 )
 
 
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
+
 BACKENDS_ORG_CONFIG_FIELDS = [
     dict(
         name="reporter_group",
@@ -230,6 +232,11 @@ ORG_CONFIG_FIELDS = [
     dict(
         name="is_on_landing_page",
         field=dict(help_text=_("Whether this org should be show on the landing page"), required=False),
+        superuser_only=True,
+    ),
+    dict(
+        name="has_count_on_link_only",
+        field=dict(help_text=_("Whether this org count should consider the count from link only"), required=False),
         superuser_only=True,
     ),
     dict(
@@ -843,8 +850,7 @@ CELERYBEAT_SCHEDULE = {
     },
     "refresh-engagement-data": {
         "task": "dash.orgs.tasks.trigger_org_task",
-        "schedule": timedelta(hours=6),
-        "relative": True,
+        "schedule": crontab(hour=2, minute=0),
         "args": ("ureport.stats.tasks.refresh_engagement_data", "sync"),
     },
 }
@@ -1067,6 +1073,14 @@ PREVIOUS_ORG_SITES = [
         is_static=True,
         count_link="https://www.zambiaureport.com/count.txt/",
     ),
+]
+
+# -----------------------------------------------------------------------------------
+# Other sites to get counts for but not display the flag
+# -----------------------------------------------------------------------------------
+OTHER_ORG_COUNT_SITES = [
+    dict(name="Global", count_link="https://www.ureport.in/count/"),
+    dict(name="Nigeria24x7", count_link="https://nigeria24x7.ureport.in/count/"),
 ]
 
 

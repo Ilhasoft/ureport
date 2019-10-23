@@ -123,8 +123,17 @@ class PollStats(models.Model):
 
     @classmethod
     def get_all_opinion_responses(cls, org, time_filter):
-        responses = PollStats.objects.filter(org=org).exclude(category=None).values("date").annotate(Sum("count"))
-        return [dict(name="Opinion Responses", data=PollStats.get_counts_data(responses, time_filter))]
+        now = timezone.now()
+        year_ago = now - timedelta(days=365)
+        start = year_ago.replace(day=1)
+
+        responses = (
+            PollStats.objects.filter(org=org, date__gte=start)
+            .exclude(category=None)
+            .values("date")
+            .annotate(Sum("count"))
+        )
+        return [dict(name=str(_("Opinion Responses")), data=PollStats.get_counts_data(responses, time_filter))]
 
     @classmethod
     def get_gender_opinion_responses(cls, org, time_filter):
@@ -208,13 +217,14 @@ class PollStats(models.Model):
 
     @classmethod
     def get_counts_data(cls, stats_qs, time_filter):
-        from ureport.utils import get_last_months
+        from ureport.utils import get_time_filter_dates_map
 
-        keys = get_last_months(months_num=time_filter)
+        dates_map = get_time_filter_dates_map(time_filter=time_filter)
+        keys = list(set(dates_map.values()))
 
         responses_data_dict = defaultdict(int)
         for elt in stats_qs:
-            key = str(elt["date"].replace(day=1).date())
+            key = dates_map.get(str(elt["date"].date()))
             responses_data_dict[key] += elt["count__sum"]
 
         data = dict()
@@ -239,7 +249,8 @@ class PollStats(models.Model):
 
         return [
             dict(
-                name="Response Rate", data=PollStats.get_response_rate_data(polled_stats, responded_stats, time_filter)
+                name=str(_("Response Rate")),
+                data=PollStats.get_response_rate_data(polled_stats, responded_stats, time_filter),
             )
         ]
 
@@ -341,18 +352,19 @@ class PollStats(models.Model):
 
     @classmethod
     def get_response_rate_data(cls, polled_qs, responded_qs, time_filter):
-        from ureport.utils import get_last_months
+        from ureport.utils import get_time_filter_dates_map
 
-        keys = get_last_months(months_num=time_filter)
+        dates_map = get_time_filter_dates_map(time_filter=time_filter)
+        keys = list(set(dates_map.values()))
 
         polled_data_dict = defaultdict(int)
         for elt in polled_qs:
-            key = str(elt["date"].replace(day=1).date())
+            key = dates_map.get(str(elt["date"].date()))
             polled_data_dict[key] += elt["count__sum"]
 
         responded_data_dict = defaultdict(int)
         for elt in responded_qs:
-            key = str(elt["date"].replace(day=1).date())
+            key = dates_map.get(str(elt["date"].date()))
             responded_data_dict[key] += elt["count__sum"]
 
         data = dict()
@@ -370,6 +382,17 @@ class PollStats(models.Model):
     @classmethod
     def get_average_response_rate(cls, org):
 
+        key = f"org:{org.id}:average_response_rate"
+        output_data = cache.get(key, None)
+        if output_data:
+            return output_data["results"]
+
+        return PollStats.calculate_average_response_rate(org)
+
+    @classmethod
+    def calculate_average_response_rate(cls, org):
+
+        key = f"org:{org.id}:average_response_rate"
         polled_stats = PollStats.objects.filter(org=org).aggregate(Sum("count"))
         responded_stats = PollStats.objects.filter(org=org).exclude(category=None).aggregate(Sum("count"))
 
@@ -380,7 +403,10 @@ class PollStats(models.Model):
         if polled is None or polled == 0:
             return 0
 
-        return responded * 100 / polled
+        percentage = responded * 100 / polled
+        cache.set(key, {"results": percentage}, None)
+
+        return percentage
 
 
 class ContactActivity(models.Model):
@@ -406,13 +432,14 @@ class ContactActivity(models.Model):
 
     @classmethod
     def get_activity_data(cls, activities_qs, time_filter):
-        from ureport.utils import get_last_months
+        from ureport.utils import get_time_filter_dates_map
 
-        keys = get_last_months(months_num=time_filter)
+        dates_map = get_time_filter_dates_map(time_filter=time_filter)
+        keys = list(set(dates_map.values()))
 
         activity_data = defaultdict(int)
         for elt in activities_qs:
-            key = str(elt["date"].replace(day=1))
+            key = dates_map.get(str(elt["date"]))
             activity_data[key] += elt["id__count"]
 
         data = dict()
@@ -433,7 +460,7 @@ class ContactActivity(models.Model):
             .values("date")
             .annotate(Count("id"))
         )
-        return [dict(name="Active Users", data=ContactActivity.get_activity_data(activities, time_filter))]
+        return [dict(name=str(_("Active Users")), data=ContactActivity.get_activity_data(activities, time_filter))]
 
     @classmethod
     def get_activity_age(cls, org, time_filter):
