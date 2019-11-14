@@ -17,7 +17,7 @@ from django.core.cache import cache
 from django.db.models import Sum
 from django.utils import timezone
 import pytz
-from ureport.assets.models import Image, FLAG, LOGO
+from ureport.assets.models import Image, LOGO
 from raven.contrib.django.raven_compat.models import client
 
 from ureport.locations.models import Boundary
@@ -120,24 +120,8 @@ def chunk_list(iterable, size):
 
 
 def get_linked_orgs(authenticated=False):
-    all_orgs = Org.objects.filter(is_active=True).order_by("name")
-
-    linked_sites = list(getattr(settings, "PREVIOUS_ORG_SITES", []))
-    for elt in linked_sites:
-        elt["order_name"] = elt["name"]
-
-    # populate a ureport site for each org so we can link off to them
-    for org in all_orgs:
-        host = org.build_host_link(authenticated)
-        org.host = host
-        if org.get_config("common.is_on_landing_page"):
-            flag = Image.objects.filter(org=org, is_active=True, image_type=FLAG).first()
-            if flag:
-                linked_sites.append(
-                    dict(name=org.name, order_name=org.subdomain, host=host, flag=flag.image.url, is_static=False)
-                )
-
-    linked_sites_sorted = sorted(linked_sites, key=lambda k: k["order_name"].lower())
+    linked_sites = list(getattr(settings, "COUNTRY_FLAGS_SITES", []))
+    linked_sites_sorted = sorted(linked_sites, key=lambda k: k["name"].lower())
 
     return linked_sites_sorted
 
@@ -231,7 +215,7 @@ def fetch_old_sites_count():
 
     start = time.time()
     this_time = datetime.now()
-    linked_sites = list(getattr(settings, "PREVIOUS_ORG_SITES", [])) + list(
+    linked_sites = list(getattr(settings, "COUNTRY_FLAGS_SITES", [])) + list(
         getattr(settings, "OTHER_ORG_COUNT_SITES", [])
     )
 
@@ -277,10 +261,6 @@ def get_global_count():
             cached_values = fetch_old_sites_count()
 
         count = sum([elt["results"].get("size", 0) for elt in cached_values if elt.get("results", None)])
-
-        for org in Org.objects.filter(is_active=True):
-            if org.get_config("common.is_on_landing_page") and not org.get_config("has_count_on_link_only"):
-                count += get_reporters_count(org)
 
         # cached for 10 min
         cache.set(GLOBAL_COUNT_CACHE_KEY, count, 60 * 10)

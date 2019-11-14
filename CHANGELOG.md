@@ -1,3 +1,47 @@
+v1.1.113
+----------
+ * Add mo files
+ * Merge pull request #525 from rapidpro/arabic-locale
+ * Rebuild locale
+ * Rebuild locale
+ * Update Arabic translations
+ * Rebuild locale
+ * Merge pull request #522 from rapidpro/translations_django-po--master_sr_RS@latin
+ * Merge pull request #524 from Quality-Management/bugfix/socialwidget
+ * Fixed class name
+ * Fixed class for widget error
+ * fixed parameter when only one social media widget is used
+ * Apply translations in sr_RS@latin
+
+v1.1.112
+----------
+ * Merge pull request #520 from rapidpro/add-canada-flag
+ * Add Canada flag
+
+v1.1.111
+----------
+ * Remove New Zealand flag
+
+v1.1.110
+----------
+ * Merge pull request #519 from rapidpro/fix-global-count
+ * Add Bengali language option
+ * Fix global count
+
+v1.1.109
+----------
+ * Fix typo
+
+v1.1.108
+----------
+ * Merge pull request #518 from rapidpro/remove-syria-flag
+ * Remove Syria flag and fix chooser flags
+
+v1.1.107
+----------
+ * Merge pull request #517 from rapidpro/country-flags-common
+ * Countries count are for sites that are for the country entirely
+
 v1.1.105
 ----------
  * Rebuild locales

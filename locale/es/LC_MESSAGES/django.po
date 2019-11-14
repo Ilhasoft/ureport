@@ -5,17 +5,18 @@
 #
 # Translators:
 # Nyaruka <info@textit.in>, 2019
-# deimidis <guillermo.movia@gmail.com>, 2019
 # Ilhasoft <contato@ilhasoft.com.br>, 2019
+# Nathallia Salvador <nathallia.salvador@ilhasoft.com.br>, 2019
+# deimidis <guillermo.movia@gmail.com>, 2019
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-23 16:25+0000\n"
+"POT-Creation-Date: 2019-11-14 10:23+0000\n"
 "PO-Revision-Date: 2019-05-15 20:27+0000\n"
-"Last-Translator: Ilhasoft <contato@ilhasoft.com.br>, 2019\n"
+"Last-Translator: deimidis <guillermo.movia@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/rapidpro/teams/226/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -1225,79 +1226,73 @@ msgid "Top Region"
 msgstr "Región principal"
 
 msgid "January"
-msgstr ""
+msgstr "Enero"
 
 msgid "February"
-msgstr ""
+msgstr "Febrero"
 
-#, fuzzy
-#| msgid "Search"
 msgid "March"
-msgstr "Buscar"
+msgstr "Marzo"
 
 msgid "April"
-msgstr ""
+msgstr "Abril"
 
 msgid "May"
-msgstr ""
+msgstr "Mayo"
 
 msgid "June"
-msgstr ""
+msgstr "Junio"
 
 msgid "July"
-msgstr ""
+msgstr "Julio"
 
 msgid "August"
-msgstr ""
+msgstr "Agosto"
 
 msgid "September"
-msgstr ""
+msgstr "Septiembre"
 
 msgid "October"
-msgstr ""
+msgstr "Octubre"
 
 msgid "November"
-msgstr ""
+msgstr "Noviembre"
 
 msgid "December"
-msgstr ""
+msgstr "Diciembre"
 
 msgid "Jan"
-msgstr ""
+msgstr "Ene"
 
 msgid "Feb"
-msgstr ""
+msgstr "Feb"
 
 msgid "Mar"
-msgstr ""
+msgstr "Mar"
 
 msgid "Apr"
-msgstr ""
+msgstr "Abr"
 
 msgid "Jun"
-msgstr ""
+msgstr "Jun"
 
 msgid "Jul"
-msgstr ""
+msgstr "Jul"
 
-#, fuzzy
-#| msgid "Age"
 msgid "Aug"
-msgstr "Edad"
+msgstr "Ago"
 
 msgid "Sep"
-msgstr ""
+msgstr "Sep"
 
 msgid "Oct"
-msgstr ""
+msgstr "Oct"
 
-#, fuzzy
-#| msgid "No"
 msgid "Nov"
-msgstr "No"
+msgstr "Nov"
 
 msgid "Dec"
-msgstr ""
+msgstr "Dic"
 
 msgid "LATEST OPINION"
 msgstr "OPINIONES RECIENTES"
@@ -1798,10 +1793,8 @@ msgstr "La etiqueta asignada a los U-Reporters que son mujeres."
 msgid "Whether this org should be show on the landing page"
 msgstr "Si esta org debe ser visualizada en la página de inicio"
 
-#, fuzzy
-#| msgid "Whether this content should include a link"
 msgid "Whether this org count should consider the count from link only"
-msgstr "Si este contenido debe incluir un enlace"
+msgstr "Cuando esta organización debe solamente contar los enlaces"
 
 msgid "The shortcode that users will use to contact U-Report locally"
 msgstr "El código corto que los usuarios deben usar para contactar localmente a U-Report "

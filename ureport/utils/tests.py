@@ -16,7 +16,6 @@ from django.conf import settings
 from django.urls import reverse
 from django.utils import timezone
 
-from ureport.assets.models import FLAG, Image
 from ureport.contacts.models import ReportersCounter
 from ureport.locations.models import Boundary
 from ureport.polls.models import CACHE_ORG_FLOWS_KEY, UREPORT_ASYNC_FETCHED_DATA_CACHE_TIME, Poll
@@ -75,65 +74,11 @@ class UtilsTest(UreportTest):
 
     def test_get_linked_orgs(self):
 
-        # use aaaburundi to force the to be alphabetically first
-        self.org.subdomain = "aaaburundi"
-        self.org.save()
-
-        settings_sites_count = len(list(getattr(settings, "PREVIOUS_ORG_SITES", [])))
+        settings_sites_count = len(list(getattr(settings, "COUNTRY_FLAGS_SITES", [])))
 
         # we have 3 old org in the settings
         self.assertEqual(len(get_linked_orgs()), settings_sites_count)
-        for old_site in get_linked_orgs():
-            self.assertFalse(old_site["name"].lower() == "aaaburundi")
-            self.assertFalse(old_site["order_name"].lower() == "burundi")
-
-        self.org.set_config("common.is_on_landing_page", True)
-
-        # missing flag
-        self.assertEqual(len(get_linked_orgs()), settings_sites_count)
-        for old_site in get_linked_orgs():
-            self.assertFalse(old_site["name"].lower() == "aaaburundi")
-            self.assertFalse(old_site["order_name"].lower() == "burundi")
-
-        Image.objects.create(
-            org=self.org,
-            image_type=FLAG,
-            name="burundi_flag",
-            image="media/image.jpg",
-            created_by=self.admin,
-            modified_by=self.admin,
-        )
-
-        # burundi should be included and be the first; by alphabetical order by subdomain
-        self.assertEqual(len(get_linked_orgs()), settings_sites_count + 1)
-        self.assertEqual(get_linked_orgs()[0]["order_name"].lower(), "aaaburundi")
-        self.assertEqual(get_linked_orgs()[0]["name"].lower(), "burundi")
-
-        self.org.subdomain = "rwanda"
-        self.org.save()
-
-        # rwanda should be included and the third in the list alphabetically by subdomain
-        self.assertEqual(len(get_linked_orgs()), settings_sites_count + 1)
-        self.assertEqual(get_linked_orgs()[settings_sites_count - 3]["order_name"].lower(), "trinidad and tobago")
-        self.assertEqual(get_linked_orgs()[settings_sites_count - 3]["name"].lower(), "trinidad and tobago")
-
-        # revert subdomain to burundi
-        self.org.subdomain = "aaaburundi"
-        self.org.save()
-
-        with self.settings(HOSTNAME="localhost:8000"):
-            self.assertEqual(get_linked_orgs()[0]["host"].lower(), "http://aaaburundi.localhost:8000")
-            self.assertEqual(get_linked_orgs(True)[0]["host"].lower(), "http://aaaburundi.localhost:8000")
-
-            self.org.domain = "ureport.bi"
-            self.org.save()
-
-            self.assertEqual(get_linked_orgs()[0]["host"].lower(), "http://aaaburundi.localhost:8000")
-            self.assertEqual(get_linked_orgs(True)[0]["host"].lower(), "http://aaaburundi.localhost:8000")
-
-            with self.settings(SESSION_COOKIE_SECURE=True):
-                self.assertEqual(get_linked_orgs()[0]["host"].lower(), "http://ureport.bi")
-                self.assertEqual(get_linked_orgs(True)[0]["host"].lower(), "https://aaaburundi.localhost:8000")
+        self.assertEqual(get_linked_orgs()[0]["name"].lower(), "argentina")
 
     @patch("dash.orgs.models.TembaClient.get_flows")
     def test_fetch_flows(self, mock_get_flows):
@@ -267,8 +212,8 @@ class UtilsTest(UreportTest):
     def test_fetch_old_sites_count(self):
         self.clear_cache()
 
-        settings_sites_count = len(list(getattr(settings, "PREVIOUS_ORG_SITES", []))) + len(
-            list(getattr(settings, "OTHER_ORG_COUNT_SITES", []))
+        settings_sites = list(getattr(settings, "COUNTRY_FLAGS_SITES", [])) + list(
+            getattr(settings, "OTHER_ORG_COUNT_SITES", [])
         )
 
         with patch("ureport.utils.datetime_to_ms") as mock_datetime_ms:
@@ -285,13 +230,15 @@ class UtilsTest(UreportTest):
 
                         old_site_values = fetch_old_sites_count()
                         self.assertEqual(
-                            old_site_values, [{"time": 500, "results": dict(size=300)}] * settings_sites_count
+                            old_site_values,
+                            [{"time": 500, "results": dict(size=300)}]
+                            * len([elt for elt in settings_sites if elt["count_link"]]),
                         )
 
-                        mock_get.assert_called_with("https://nigeria24x7.ureport.in/count/")
+                        mock_get.assert_called_with("https://www.ureport.in/count/")
 
                         cache_set_mock.assert_called_with(
-                            "org:nigeria24x7:reporters:old-site",
+                            "org:global:reporters:old-site",
                             {"time": 500, "results": dict(size=300)},
                             UREPORT_ASYNC_FETCHED_DATA_CACHE_TIME,
                         )
@@ -590,15 +537,6 @@ class UtilsTest(UreportTest):
 
                 self.assertEqual(get_global_count(), 0)
 
-                ReportersCounter.objects.create(org=self.org, type="total-reporters", count=5)
-
-                # ignored if not on the global homepage
-                self.assertEqual(get_global_count(), 0)
-
-                # add the org to the homepage
-                self.org.set_config("common.is_on_landing_page", True)
-                self.assertEqual(get_global_count(), 5)
-
                 mock_old_sites_count.return_value = [
                     {"time": 500, "results": dict(size=300)},
                     {"time": 500, "results": dict(size=50)},
@@ -606,10 +544,6 @@ class UtilsTest(UreportTest):
                 from django.core.cache import cache
 
                 cache.delete(GLOBAL_COUNT_CACHE_KEY)
-                self.assertEqual(get_global_count(), 355)
-
-                cache.delete(GLOBAL_COUNT_CACHE_KEY)
-                self.org.set_config("common.is_on_landing_page", False)
                 self.assertEqual(get_global_count(), 350)
 
             with patch("django.core.cache.cache.get") as cache_get_mock:
