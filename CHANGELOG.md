@@ -1,3 +1,62 @@
+v1.1.130
+----------
+ * Merge pull request #553 from rapidpro/add-fsm
+ * Add FSM icon
+
+v1.1.129
+----------
+ * Merge pull request #552 from rapidpro/fix-active-users-charts-data
+ * Active users are stored by month only so use the date for the month
+
+v1.1.128
+----------
+ * Merge pull request #551 from rapidpro/squash-stats-part-2
+ * Add migrations
+ * Add squash method and task
+
+v1.1.127
+----------
+ * Merge pull request #550 from rapidpro/squash-stats-part-1
+ * Update Django
+ * Add is_squashed field to stats model
+ * Update CHANGELOG.md for v1.1.126
+ * Merge pull request #549 from rapidpro/remove-ca
+ * Remove CA flag
+
+v1.1.126
+----------
+ * Merge pull request #549 from rapidpro/remove-ca
+ * Remove CA flag
+
+v1.1.125
+----------
+ * Merge pull request #547 from rapidpro/pacific-flag
+ * Add Pacific flag
+ * Update CHANGELOG.md for v1.1.124
+ * Rebuild locales, with symlinks
+ * Rebuild locales
+ * Rebuild locales
+ * Rebuild locales
+ * Rebuild locales
+ * Compile messages
+ * Merge pull request #546 from rapidpro/fix-flags
+ * Merge pull request #544 from rapidpro/translations_django-po--master_bs
+ * Add Botswana flag, fix links properly
+ * Translate /locale/en/LC_MESSAGES/django.po in bs
+
+v1.1.124
+----------
+ * Rebuild locales, with symlinks
+ * Rebuild locales
+ * Rebuild locales
+ * Rebuild locales
+ * Rebuild locales
+ * Compile messages
+ * Merge pull request #546 from rapidpro/fix-flags
+ * Merge pull request #544 from rapidpro/translations_django-po--master_bs
+ * Add Botswana flag, fix links properly
+ * Translate /locale/en/LC_MESSAGES/django.po in bs
+
 v1.1.123
 ----------
  * Update JS deps

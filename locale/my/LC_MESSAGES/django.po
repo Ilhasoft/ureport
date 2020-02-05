@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 12:25+0000\n"
+"POT-Creation-Date: 2020-01-10 15:03+0000\n"
 "PO-Revision-Date: 2019-05-15 20:27+0000\n"
 "Last-Translator: Sandar Linn <slinn@unicef.org>, 2019\n"
 "Language-Team: Burmese (https://www.transifex.com/rapidpro/teams/226/my/)\n"
@@ -133,17 +133,20 @@ msgstr "Content Types"
 msgid "Content Blocks"
 msgstr "Content Blocks"
 
-#, python-format
+#, fuzzy, python-format
+#| msgid "Content Blocks"
 msgid "%s Blocks"
-msgstr ""
+msgstr "Content Blocks"
 
-#, python-format
+#, fuzzy, python-format
+#| msgid "Edit"
 msgid "Edit %s"
-msgstr ""
+msgstr "Edit"
 
-#, python-format
+#, fuzzy, python-format
+#| msgid "Create"
 msgid "Create %s"
-msgstr ""
+msgstr "Create"
 
 msgid "Create Content Block"
 msgstr "Create Content Block"
@@ -348,9 +351,10 @@ msgstr "Create"
 msgid "Your invitation link is invalid. Please contact your organization administrator."
 msgstr "Your invitation link is invalid. Please contact your organization administrator."
 
-#, python-format
+#, fuzzy, python-format
+#| msgid "Join & Engage"
 msgid "Join %(name)s"
-msgstr ""
+msgstr "U-Report တြင္ပါ၀င္ရန္"
 
 msgid "Join"
 msgstr "Join"
@@ -588,32 +592,46 @@ msgstr ""
 msgid "Whether this user is allowed to log into the site"
 msgstr ""
 
+#, fuzzy
+#| msgid "Users will only get those permissions that are allowed for their group."
 msgid "Users will only get those permissions that are allowed for their group"
-msgstr ""
+msgstr "Users will only get those permissions that are allowed for their group."
 
+#, fuzzy
+#| msgid "Set the user's initial password here."
 msgid "You can reset the user's password by entering a new password here"
-msgstr ""
+msgstr "Set the user's initial password here."
 
 msgid "Username"
 msgstr ""
 
+#, fuzzy
+#| msgid "Your new password."
 msgid "Your password"
-msgstr ""
+msgstr "Your new password."
 
+#, fuzzy
+#| msgid "Confirm your new password by entering it here"
 msgid "If you want to set a new password, enter it here"
-msgstr ""
+msgstr "Confirm your new password by entering it here"
 
+#, fuzzy
+#| msgid "Confirm new Password"
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Confirm new Password"
 
+#, fuzzy
+#| msgid "Confirm your new password."
 msgid "Confirm your new password"
-msgstr ""
+msgstr "Confirm your new password."
 
 msgid "Edit your profile"
 msgstr ""
 
+#, fuzzy
+#| msgid "Password"
 msgid "Password Recovery"
-msgstr ""
+msgstr "Password"
 
 msgid "An Email has been sent to your account with further instructions."
 msgstr ""
@@ -621,8 +639,10 @@ msgstr ""
 msgid "Password Recovery Request"
 msgstr ""
 
+#, fuzzy
+#| msgid "Your new password."
 msgid "Pick a new password"
-msgstr ""
+msgstr "Your new password."
 
 msgid "Your password has successfully been updated, thank you."
 msgstr ""
@@ -634,8 +654,10 @@ msgstr ""
 msgid "Password Updated Successfully. Now you can log in using your new password."
 msgstr ""
 
+#, fuzzy
+#| msgid "New Password"
 msgid "Reset your Password"
-msgstr ""
+msgstr "New Password"
 
 msgid "Your link has expired for security reasons. Please reinitiate the process by entering your email here."
 msgstr ""
