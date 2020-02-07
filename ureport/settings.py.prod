@@ -141,6 +141,10 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'HTTPS')
 
 REDIS_HOST = config('REDIS_HOST')
 REDIS_DATABASE = config('REDIS_DATABASE', default='1')
+# compress arguments
+COMPRESS_CSS_HASHING_METHOD = 'content'
+COMPRESS_OFFLINE = True
+COMPRESS_OFFLINE_CONTEXT = 'ureport.utils.offline_context'
 
 BROKER_URL = 'redis://{}:6379/{}'.format(REDIS_HOST, REDIS_DATABASE)
 
@@ -164,7 +168,7 @@ COMPRESS_OFFLINE = config('COMPRESS_OFFLINE', default=True, cast=bool)
 COMPRESS_CSS_FILTERS = [
     'compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.cssmin.CSSMinFilter']
 COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']
-COMPRESS_OFFLINE_CONTEXT = dict(STATIC_URL=STATIC_URL, base_template='frame.html', debug=False, testing=False)
+#COMPRESS_OFFLINE_CONTEXT = dict(STATIC_URL=STATIC_URL, base_template='frame.html', debug=False, testing=False)
 
 PREVIOUS_ORG_SITES = [
     dict(
