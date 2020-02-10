@@ -22,7 +22,6 @@ COPY pip-freeze.txt .
 
 RUN pip install -r pip-freeze.txt
 RUN npm install -g less coffeescript
-
 RUN npm install
 
 COPY . .
