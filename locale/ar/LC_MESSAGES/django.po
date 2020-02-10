@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-10 12:25+0000\n"
+"POT-Creation-Date: 2020-01-10 15:03+0000\n"
 "PO-Revision-Date: 2019-05-15 20:27+0000\n"
 "Last-Translator: Abraham Okiror <okiroribra@gmail.com>, 2019\n"
 "Language-Team: Arabic (https://www.transifex.com/rapidpro/teams/226/ar/)\n"
@@ -281,8 +281,10 @@ msgstr "نوع الخلفية "
 msgid "The image file"
 msgstr "ملف الصورة "
 
+#, fuzzy
+#| msgid "The title for this item"
 msgid "The API token for this backend"
-msgstr ""
+msgstr "عنوان البند "
 
 #, python-format
 msgid ""
@@ -356,8 +358,10 @@ msgstr "رابط الدعوة الخاص بك لا يعمل، الرجاء ال�
 msgid "Join %(name)s"
 msgstr "إنضم الى %(name)s"
 
+#, fuzzy
+#| msgid "Join Now"
 msgid "Join"
-msgstr ""
+msgstr "انضم الآن!"
 
 msgid "Your invitation link has expired. Please contact your organization administrator."
 msgstr "لقد إنتهت الفترة المخصصة لرابط الدعوة الخاصة بك، الرجاء التوصل مع المشرف في منظمتك. "

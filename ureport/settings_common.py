@@ -820,6 +820,7 @@ CELERYBEAT_SCHEDULE = {
         "schedule": timedelta(minutes=20),
         "relative": True,
     },
+    "polls_stats_squash": {"task": "polls.polls_stats_squash", "schedule": timedelta(minutes=10), "relative": True},
     "contact-pull": {
         "task": "dash.orgs.tasks.trigger_org_task",
         "schedule": crontab(minute=[0, 10, 20, 30, 40, 50]),
@@ -945,21 +946,25 @@ COUNTRY_FLAGS_SITES = [
         count_link="http://brasil.ureport.in/count/",
     ),
     dict(
-        name="Burundi",
-        host="//burundi.ureport.in/",
-        flag="flag_burkina_faso.png",
+        name="Botswana",
+        host="//botswana.ureport.in/",
+        flag="flag_botswana.png",
         is_static=True,
-        count_link="http://burundi.ureport.in/count/",
+        count_link="http://botswana.ureport.in/count/",
     ),
     dict(
         name="Burkina Faso",
         host="//burkinafaso.ureport.in/",
-        flag="flag_burundi.png",
+        flag="flag_burkina_faso.png",
         is_static=True,
         count_link="http://burkinafaso.ureport.in/count/",
     ),
     dict(
-        name="Canada", host="//oneyouth.unicef.ca/en/u-report/", flag="flag_canada.png", is_static=True, count_link=""
+        name="Burundi",
+        host="//burundi.ureport.in/",
+        flag="flag_burundi.png",
+        is_static=True,
+        count_link="http://burundi.ureport.in/count/",
     ),
     dict(
         name="Cameroun",
@@ -1037,6 +1042,13 @@ COUNTRY_FLAGS_SITES = [
         flag="flag_france.png",
         is_static=True,
         count_link="http://france.ureport.in/count/",
+    ),
+    dict(
+        name="FSM",
+        host="//fsm.ureport.in",
+        flag="flag_fsm.png",
+        is_static=True,
+        count_link="http://fsm.ureport.in/count/",
     ),
     dict(
         name="Gambia",
@@ -1205,6 +1217,13 @@ COUNTRY_FLAGS_SITES = [
         flag="flag_on_the_move.png",
         is_static=True,
         count_link="http://onthemove.ureport.in/count/",
+    ),
+    dict(
+        name="Pacific",
+        host="//pacific.ureport.in",
+        flag="flag_pacific.png",
+        is_static=True,
+        count_link="http://pacific.ureport.in/count/",
     ),
     dict(
         name="Pakistan",
