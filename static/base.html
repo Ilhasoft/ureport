@@ -17,14 +17,14 @@
   <link rel="icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
 
   <!-- CSS: implied media="all" -->
-  {# load compress #}
-  {# compress css #}
+  {% load compress %}
+  {% compress css %}
   <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css">
   <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/smartmin_styles.css">
   <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/styles.css">
   {% block extra-style %}{% endblock %}
 
-  {# endcompress #}
+  {% endcompress %}
 </head>
 
 <body>
@@ -119,7 +119,7 @@
   }
 </script>
 
-{# compress js #}
+{% compress js %}
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.pjax.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/scripts.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap-alerts.js"></script>
@@ -132,7 +132,7 @@
 
 {% block extra-script %}{% endblock %}
 {% block script %}{% endblock %}
-{# endcompress #}
+{% endcompress %}
 
 <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
 <!--script type="text/javascript">

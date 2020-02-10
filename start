@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+
+python /app/manage.py collectstatic --noinput
+
+if [ "${COMPRESS_ENABLED}" = true ]; then
+    python /app/manage.py compress --extension=.haml,.html
+fi
+
+/usr/local/bin/gunicorn ureport.wsgi --log-config /app/gunicorn/gunicorn-logging.conf -c /app/gunicorn/gunicorn.conf.py
