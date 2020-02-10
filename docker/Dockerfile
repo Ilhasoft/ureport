@@ -18,10 +18,13 @@ RUN apt install -y \
 
 # RUN adduser -G django django
 
+RUN npm install npm@latest -g
+
 RUN npm install --global --unsafe-perm \
   coffeescript \
   less \
-  yarn
+  yarn \
+  tslib
 
 COPY ./package.json /app
 RUN npm install
