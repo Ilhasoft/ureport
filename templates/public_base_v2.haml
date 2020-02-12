@@ -713,15 +713,6 @@
         $('.modal-content').offset({top: $(window).scrollTop() + 150})
         var region = document.body.querySelector("#" + eltID);
 
-        function svgToCanvas(targetElem) {
-          var svgElem = targetElem.getElementsByTagName("svg");
-          for (const node of svgElem) {
-            node.setAttribute("font-family", window.getComputedStyle(node, null).getPropertyValue("font-family"));
-            node.replaceWith(node);
-          }
-        }
-        svgToCanvas(region);
-
         html2canvas(region).then(canvas => {
           var imageData = canvas.toDataURL("image/png");
           $("img.screenshot-rendered").attr("src", imageData);
