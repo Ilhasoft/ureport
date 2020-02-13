@@ -655,6 +655,9 @@
       window.string_TopRegion = "{% trans "Top Region" %}";
 
       Highcharts.setOptions({
+        style: {
+            fontFamily: 'sans-serif'
+        },
         lang: {
           months: [
             "{% trans "January" %}",
@@ -716,7 +719,6 @@
         html2canvas(region).then(canvas => {
           var imageData = canvas.toDataURL("image/png");
           $("img.screenshot-rendered").attr("src", imageData);
-          $("img.screenshot-rendered").attr("style", "color:black;cursor:default;font-family:sans-serif;font-size:50;font-weight:bold;fill:black;");
           $("a.download-screenshot").attr("download", "ureport-screenshare-" + eltID + Date.now() + ".png")
           $("a.download-screenshot").attr("href", imageData);
 
