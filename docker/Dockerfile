@@ -1,48 +1,28 @@
-FROM python:3.6
+FROM python:3.6-alpine
 
-ARG COMPRESS_ENABLED
+ENV WORKDIR /ureport
+WORKDIR $WORKDIR
 
-ENV PYTHONUNBUFFERED 1
-WORKDIR /app
+RUN apk add --no-cache varnish wget gettext git
+RUN apk add --no-cache jpeg-dev zlib-dev
+RUN apk add --no-cache postgresql-dev nodejs nodejs-npm
+RUN apk add --no-cache supervisor
 
-RUN apt update
-RUN apt upgrade -y
-RUN apt install -y \
-    varnish \
-    gettext \
-    supervisor \
-    curl \
-    npm \
-    nodejs \
-    software-properties-common
+COPY varnish.default.vcl /etc/varnish/default.vcl
+COPY pip-freeze.txt .
+COPY package.json .
 
-# RUN adduser -G django django
-
-RUN npm install npm@latest -g
-
-RUN npm install --global --unsafe-perm \
-  coffeescript \
-  less \
-  yarn \
-  tslib
-
-COPY ./package.json /app
+RUN pip install -r pip-freeze.txt
 RUN npm install
+RUN npm install -g less coffeescript
 
-COPY ./pip-freeze.txt /app
-RUN pip install --no-cache-dir -r pip-freeze.txt
-RUN pip install gevent
-
-COPY . /app
-RUN ln -s /app/ureport/settings.py.prod /app/ureport/settings.py
-
-COPY start /start
-RUN sed -i 's/\r$//g' /start
-RUN chmod +x /start
-# RUN chown django /start
-
-# RUN chown -R django /app
-# USER django
+COPY . .
 
 EXPOSE 8000
-ENTRYPOINT ["/start"]
+EXPOSE 8080
+
+RUN chmod +x ./docker-entrypoint.sh
+RUN chmod +x ./app-entrypoint.sh
+
+ENTRYPOINT ["sh", "docker-entrypoint.sh"]
+CMD ["supervisor"]
