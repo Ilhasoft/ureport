@@ -16,6 +16,8 @@ RUN pip install -r pip-freeze.txt
 RUN npm install
 RUN npm install -g less coffeescript
 
+COPY ureport/settings.py.prod ureport/settings.py
+
 COPY . .
 
 EXPOSE 8000
