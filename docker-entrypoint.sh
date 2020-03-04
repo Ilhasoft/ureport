@@ -7,7 +7,7 @@ case $1 in
     ;;
     celery)
         export QUEUE_NAME=$3
-        celery worker -A ureport -Q sync,celery --workdir=/app/ -l INFO --autoscale=12,1
+        /usr/bin/supervisord -n -c celery.conf
     ;;
 esac
 
