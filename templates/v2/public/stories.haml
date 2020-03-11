@@ -2,8 +2,19 @@
 
 - load thumbnail ureport i18n compress
 
+-block meta-extra
+  -if org|config:"facebook_page_id" and org|config:"facebook_app_id"
+    %meta(property="og:url" content="{% org_host_link %}{% url 'v2.public.story_read' story.pk %}")
+    %meta(property="og:type" content="article")
+    %meta(property="og:title" content="{{ story.title }}")
+    %meta(property="fb:app_id" content='{{ org|config:"facebook_app_id" }}')
+    %meta(property="og:description" content="{{story.summary|truncatewords:50|linebreaksbr}}")
+    {% thumbnail org.get_image "900" crop="top" as im %}
+    %meta(property="og:image" content="{{im.url}}")
+    {% endthumbnail %}
+
 -block content
-  .bg-grid.border-t.border-b
+  .bg-grid.border-t.border-b<<<
     .max-w-page.mx-auto.p-home(class="md:flex")
       .flex-1.flex-center-y.hover-parent
         {% edit_content 'orgs.org_edit' "" "#id_common.stories_description" "" "dark" %}
