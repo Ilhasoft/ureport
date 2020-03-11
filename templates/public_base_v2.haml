@@ -13,7 +13,7 @@
     %meta(name="description" content="")
     %meta(name="keywords" content="")
     %meta(name="author" content="")
-    {% thumbnail org.get_logo.url "x180" format="PNG" as im %}
+    {% thumbnail org.get_logo "x180" format="PNG" as im %}
     %meta(property="og:image" content="{{im.url}}")
     {% endthumbnail %}
 

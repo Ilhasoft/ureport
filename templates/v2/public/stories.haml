@@ -9,7 +9,7 @@
     %meta(property="og:title" content="{{ story.title }}")
     %meta(property="fb:app_id" content='{{ org|config:"facebook_app_id" }}')
     %meta(property="og:description" content="{{story.summary|truncatewords:50|linebreaksbr}}")
-    {% thumbnail org.get_logo.url "x180" format="PNG" as im %}
+    {% thumbnail org.get_logo "x180" format="PNG" as im %}
     %meta(property="og:image" content="{{im.url}}")
     {% endthumbnail %}
 
