@@ -564,6 +564,11 @@ ORG_CONFIG_FIELDS = [
             widget=Textarea,
         ),
     ),
+    dict(
+        name="other_languages_sites",
+        field=dict(help_text=_("Other language sites links"), required=False),
+        superuser_only=True,
+    ),
 ]
 
 
@@ -843,7 +848,7 @@ CELERYBEAT_SCHEDULE = {
         "task": "dash.orgs.tasks.trigger_org_task",
         "schedule": timedelta(minutes=10),
         "relative": True,
-        "args": ("ureport.polls.tasks.backfill_poll_results", "sync"),
+        "args": ("ureport.polls.tasks.backfill_poll_results",),
     },
     "results-pull-main-poll": {
         "task": "dash.orgs.tasks.trigger_org_task",
@@ -876,7 +881,7 @@ CELERYBEAT_SCHEDULE = {
     "clear-old-results": {
         "task": "dash.orgs.tasks.trigger_org_task",
         "schedule": crontab(hour=4, minute=0),
-        "args": ("ureport.polls.tasks.clear_old_poll_results", "sync"),
+        "args": ("ureport.polls.tasks.clear_old_poll_results",),
     },
 }
 
@@ -1160,6 +1165,13 @@ COUNTRY_FLAGS_SITES = [
         flag="flag_kiribati.png",
         is_static=True,
         count_link="http://kiribati.ureport.in/count/",
+    ),
+    dict(
+        name="Lesotho",
+        host="//les.ureport.in/",
+        flag="flag_lesotho.png",
+        is_static=True,
+        count_link="http://les.ureport.in/count/",
     ),
     dict(
         name="Liberia",

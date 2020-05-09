@@ -1,3 +1,38 @@
+v1.1.153
+----------
+ * Better message
+ * Hide multiple pages for mobile
+ * Improve mobile site
+ * Remove unused method
+ * Add migration file
+ * Fix the location and age segmentation
+ * Add a way to configure the display of the category for poll questions
+ * Show clear feedback to admin on polls being synced
+
+v1.1.152
+----------
+ * Merge pull request #583 from rapidpro/fix-locations-sync
+ * Merge pull request #584 from Ilhasoft/feature/add-lesotho
+ * add lesotho to ureport
+ * Add ordering so we can delete to update the locations boundaries without constraint
+
+v1.1.151
+----------
+ * Merge pull request #581 from rapidpro/move-task-queues
+ * Move task queues
+
+v1.1.150
+----------
+ * Merge pull request #580 from Ilhasoft/hotfix/fix-size-bulgaria-flag
+ * Remove overflow style
+ * fix size bulgaria flag
+
+v1.1.149
+----------
+ * Merge pull request #579 from rapidpro/other-lang-sites
+ * Include current site with a check mark
+ * Add a way to link sites as connected sites in a different language
+
 v1.1.148
 ----------
  * Rebuild locale
