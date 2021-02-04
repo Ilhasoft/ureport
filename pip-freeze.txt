@@ -80,7 +80,6 @@ rjsmin==1.1.0             # via django-compressor
 s3transfer==0.1.13        # via boto3
 sentry-sdk==0.19.5
 sgmllib3k==1.0.0          # via feedparser
-sentry-sdk==0.7.3
 simplejson==3.16.0        # via django-rest-swagger
 six==1.11.0               # via django-rosetta, microsofttranslator, mock, pip-tools, python-dateutil
 smartmin==2.2.2
