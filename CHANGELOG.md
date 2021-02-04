@@ -1,3 +1,31 @@
+v1.1.207
+----------
+ * Fix count link
+
+v1.1.206
+----------
+ * Merge pull request #669 from rapidpro/translations_django-po--master_mk_MK
+ * Merge pull request #670 from rapidpro/update-sentry-sdk
+ * Update sentry SDK
+ * Apply translations in mk_MK
+
+v1.1.205
+----------
+ * Merge pull request #667 from rapidpro/update-idx
+ * Move FB pixel to public site
+ * Add index on reporterscounter
+ * Bump CI testing to PG 11 and 12
+
+v1.1.204
+----------
+ * Merge pull request #664 from rapidpro/polls-api
+ * Merge pull request #665 from rapidpro/countries-flag
+ * Run code checks
+ * Add Canada on countries list
+ * Filter API polls to only show polls displayed on the public site
+ * Merge pull request #662 from rapidpro/dependabot/npm_and_yarn/ini-1.3.8
+ * Bump ini from 1.3.5 to 1.3.8
+
 v1.1.203
 ----------
  * Merge pull request #659 from rapidpro/fix-chart-labels-alignment
