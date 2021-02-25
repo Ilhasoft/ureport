@@ -1,3 +1,34 @@
+v1.1.203
+----------
+ * Merge pull request #659 from rapidpro/fix-chart-labels-alignment
+ * Align labels to the left
+
+v1.1.202
+----------
+ * Merge pull request #658 from rapidpro/fix-stories-homepage
+
+v1.1.200
+----------
+ * Merge pull request #657 from rapidpro/sec-adjustments
+
+v1.1.197
+----------
+ * Merge pull request #656 from rapidpro/fix-counts-cache-to-consider
+ * Generate cache keys for the configured sites only
+
+v1.1.196
+----------
+ * Merge pull request #655 from rapidpro/pacific-as-1
+ * Regional site countries excluded from count for now
+
+v1.1.195
+----------
+ * Merge pull request #654 from rapidpro/add-np
+ * Add Nepal to countries dropdown
+ * Run code check
+ * Merge pull request #653 from rapidpro/translations_django-po--master_no
+ * Translate /locale/en/LC_MESSAGES/django.po in no
+
 v1.1.194
 ----------
  * Merge pull request #646 from rapidpro/fix-countries-count

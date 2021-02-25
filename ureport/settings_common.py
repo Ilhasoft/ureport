@@ -158,7 +158,6 @@ CSRF_COOKIE_AGE = 7200
 
 ROOT_URLCONF = "ureport.urls"
 
-
 DATA_API_BACKENDS_CONFIG = {
     "rapidpro": {"name": "RapidPro", "slug": "rapidpro", "class_type": "ureport.backend.rapidpro.RapidProBackend"}
 }
@@ -772,8 +771,14 @@ LOGOUT_REDIRECT_URL = "/"
 # -----------------------------------------------------------------------------------
 # Auth Configuration
 # -----------------------------------------------------------------------------------
-
 AUTHENTICATION_BACKENDS = ("django.contrib.auth.backends.ModelBackend",)
+
+AUTH_PASSWORD_VALIDATORS = [
+    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator", "OPTIONS": {"min_length": 8}},
+    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
+]
 
 ANONYMOUS_USER_NAME = "AnonymousUser"
 
@@ -1288,6 +1293,13 @@ COUNTRY_FLAGS_SITES = [
         count_link="http://nigeria24x7.ureport.in/count/",
     ),
     dict(
+        name="Nepal",
+        host="//nepal.ureport.in",
+        flag="flag_nepal.png",
+        countries_codes=["NPL"],
+        count_link="http://nepal.ureport.in/count/",
+    ),
+    dict(
         name="Norge",
         host="//norge.ureport.in",
         flag="flag_norge.png",
@@ -1305,7 +1317,7 @@ COUNTRY_FLAGS_SITES = [
         name="Pacific",
         host="//pacific.ureport.in",
         flag="flag_pacific.png",
-        countries_codes=["COK", "FJI", "MHL", "NRU", "NIU", "PLW", "WSM", "TKL", "TON", "TUV", "VUT"],
+        countries_codes=["FJI"],  # ["COK", "FJI", "MHL", "NRU", "NIU", "PLW", "WSM", "TKL", "TON", "TUV", "VUT"],
         count_link="http://pacific.ureport.in/count/",
     ),
     dict(
@@ -1368,7 +1380,7 @@ COUNTRY_FLAGS_SITES = [
         name="South Asia",
         host="//southasia.ureport.in",
         flag="flag_south_asia.png",
-        countries_codes=["AFG", "BGD", "BTN", "IND", "MDV", "NPL", "PAK", "LKA"],
+        countries_codes=[],  # ["AFG", "BGD", "BTN", "IND", "MDV", "NPL", "PAK", "LKA"],
         count_link="http://southasia.ureport.in/count/",
     ),
     dict(
