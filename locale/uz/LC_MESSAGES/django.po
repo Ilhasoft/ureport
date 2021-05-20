@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-07 15:19+0000\n"
+"POT-Creation-Date: 2021-05-20 14:36+0000\n"
 "PO-Revision-Date: 2019-05-15 20:27+0000\n"
 "Last-Translator: Farhodhon Jurahonov <farhodj@gmail.com>, 2020\n"
 "Language-Team: Uzbek (https://www.transifex.com/rapidpro/teams/226/uz/)\n"
@@ -1569,7 +1569,14 @@ msgstr "Mazkur tashkilot sanog'i faqat linkdagilarni hisobga olishi kerakmi"
 msgid "The shortcode that users will use to contact U-Report locally"
 msgstr "Foydalanuvchilar mahalliy darajada U-Report bilan bog'lanish uchun ishlatadigan qisqa kod"
 
-msgid "The whatapp number that users will use to contact U-Report if you have one"
+#, fuzzy
+#| msgid "The whatapp number that users will use to contact U-Report if you have one"
+msgid "The WhatsApp number that users will use to contact U-Report if you have one"
+msgstr "Foydalanuvchilar U-Report bilan bog'lanishlari mumkin bo'lgan whatsapp raqami, agar sizda mavjud bo'lsa. "
+
+#, fuzzy
+#| msgid "The whatapp number that users will use to contact U-Report if you have one"
+msgid "The Telegram bot that users will use to contact U-Report if you have one"
 msgstr "Foydalanuvchilar U-Report bilan bog'lanishlari mumkin bo'lgan whatsapp raqami, agar sizda mavjud bo'lsa. "
 
 #, fuzzy
@@ -1647,6 +1654,11 @@ msgstr "Faqat xaritalarda ko'rsatiladigan mamlakatlar"
 
 msgid "The states to show on maps only, used to filter poll results"
 msgstr "Faqat xaritalarda ko'rsatiladigan mamlakatlar, so'rovnoma natijalarini filtrdan o'tkazish uchun ishlatiladi"
+
+#, fuzzy
+#| msgid "The Google Analytics Tracking ID for this organization"
+msgid "The Google Tag Manager ID for this organization"
+msgstr "Mazkur tashkilot uchun Google Analytics Kuzatib borish identifikatori"
 
 msgid "The Google Analytics Tracking ID for this organization"
 msgstr "Mazkur tashkilot uchun Google Analytics Kuzatib borish identifikatori"
