@@ -1625,7 +1625,7 @@ msgstr "Синхронизировано"
 
 #, python-brace-format
 msgid "Sync currently in progress... {sync_progress:.1f}%"
-msgstr "Выполняется синхронизация ... {sync_progress: .1f}%"
+msgstr "Выполняется синхронизация ... {sync_progress:.1f}%"
 
 #, python-brace-format
 msgid "Edit Poll for flow [{flow_name} ({flow_date_hint})]"
