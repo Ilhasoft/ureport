@@ -1,3 +1,82 @@
+v1.1.298
+----------
+ * Merge pull request #795 from rapidpro/more-indexes
+ * Add more index on contact activities
+
+v1.1.297
+----------
+ * Merge pull request #793 from rapidpro/few-queries-for-rebuild-stats
+ * Merge pull request #796 from Ilhasoft/feature/translations_django-po--master_ru
+ * translation completed for the source file '/locale/en/LC_MESSAGES/django.po' on the 'ru' language.
+ * Remove count of poll results IDs in rebuilt poll stats
+
+v1.1.296
+----------
+ * Merge pull request #781 from rapidpro/engagement-chart-2
+ * Fix conflicts
+ * Merge pull request #790 from rapidpro/dependabot/npm_and_yarn/nth-check-2.0.1
+ * Merge pull request #785 from rapidpro/join-c2a
+ * Fix conflicts
+ * Merge pull request #786 from rapidpro/remove-v1-colors-use
+ * Test on Python 3.9
+ * Bump nth-check from 2.0.0 to 2.0.1
+ * Merge main
+ * Run code_checks
+ * Add join call to action text config
+ * Adjust colors for join call to action button on the top
+ * Make sure to fill the colors list with the default colors
+ * Merge branch 'main' of github.com:rapidpro/ureport into remove-v1-colors-use
+ * Run code_checks
+ * Merge branch 'main' of github.com:rapidpro/ureport into engagement-chart-2
+ * Merge pull request #787 from rapidpro/fix-reverse-migrations
+ * Merge branch 'main' of github.com:rapidpro/ureport into engagement-chart-2
+
+v1.1.295
+----------
+ * Merge pull request #784 from rapidpro/FB-customerchat-dialog-hidden
+ * Merge pull request #783 from rapidpro/resumable-scheme-backfill
+ * Merge pull request #782 from rapidpro/better-index
+ * Merge pull request #779 from rapidpro/engagement-chart-1
+ * Hide customer chat plugin dialog until user clicks on it
+ * Run code_check
+ * Make scheme backfill tasks resumable
+ * Show chart breakdown by default on engagement page
+ * Add better indexes
+ * Merge pull request #780 from Ilhasoft/feature/kyrgyzstan-flag
+ * feat: Add Kyrgyzstan flag
+
+v1.1.294
+----------
+ * Merge pull request #778 from rapidpro/use-slow-queue-to-backfill
+ * Use the slow queue to backfill the schemes
+
+v1.1.293
+----------
+ * Merge pull request #777 from rapidpro/make_many_different_task_to_backfill
+ * Distribute the backfill task for schemes
+
+v1.1.292
+----------
+ * Merge pull request #775 from rapidpro/support-scheme-2
+ * Fix returned tuple assignment for get_or_create
+ * Copy actually task code to not go through the decorator
+ * For pull contacts from scratch if we have contacts without scheme set
+ * Fix query
+ * Fix argument to pull_contact method
+ * Add task to populate the schemes
+ * Save scheme on contact activity
+ * Save scheme on poll stats
+ * Add sign rate by scheme function
+ * Run code checks
+ * Write scheme for contacts and poll results when syncing
+
+v1.1.291
+----------
+ * Merge pull request #776 from rapidpro/add-benin
+ * Add Benin icon
+ * Merge pull request #774 from rapidpro/support-scheme-1
+ * WIP add Benin to countries list
+
 v1.1.289
 ----------
  * Merge pull request #773 from rapidpro/dashblock-api
