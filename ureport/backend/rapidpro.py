@@ -1025,7 +1025,7 @@ class RapidProBackend(BaseBackend):
         update_required = update_required or poll_obj.completed != completed
         # if the reporter answered the step, check if this is a newer run
         if poll_obj.date is not None:
-            if poll_obj.id == 3783:
+            if poll_obj.flow == "b63d3855-3e08-4be7-970f-e0de6e39f3dc":
                 update_required = update_required or (value_date > poll_obj.date)
             else:
                 update_required = update_required and (value_date > poll_obj.date)
