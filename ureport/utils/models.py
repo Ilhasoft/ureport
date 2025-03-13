@@ -25,16 +25,18 @@ class SquashableModel(models.Model):
         start = time.time()
         num_sets = 0
 
-        for distinct_set in cls.get_unsquashed().order_by(*cls.squash_over).distinct(*cls.squash_over)[:5000]:
+        for distinct_set in cls.get_unsquashed().order_by(*cls.squash_over).distinct(*cls.squash_over)[:1000]:
             with connection.cursor() as cursor:
                 sql, params = cls.get_squash_query(distinct_set)
 
                 cursor.execute(sql, params)
 
             num_sets += 1
+            print("num_sets", num_sets)
 
         time_taken = time.time() - start
 
+        print("Squashed %d distinct sets of %s in %0.3fs" % (num_sets, cls.__name__, time_taken))
         logging.info("Squashed %d distinct sets of %s in %0.3fs" % (num_sets, cls.__name__, time_taken))
 
     @classmethod

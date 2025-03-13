@@ -1022,7 +1022,7 @@ class ContactActivityCounter(SquashableModel):
             "table": cls._meta.db_table
         }
 
-        return sql, (distinct_set.org_id, distinct_set.date, distinct_set.type, distinct_set.value) * 2
+        return sql, (distinct_set[0], distinct_set[1], distinct_set[2], distinct_set[3]) * 2
 
     class Meta:
         indexes = [
