@@ -1065,6 +1065,10 @@ class RapidProBackend(BaseBackend):
         To check whether any value need to be updated in the DB,
         if the syncing data is newer/changed to what we have in the DB
         """
+        # whatever the case, if the new category is None and the old one is not, we should keep the old one
+        if category is None and poll_obj.category is not None:
+            return False
+
         update_required = poll_obj.category != category or poll_obj.text != text
         update_required = update_required or poll_obj.state != state
         update_required = update_required or poll_obj.district != district
