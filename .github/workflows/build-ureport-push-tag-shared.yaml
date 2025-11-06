@@ -32,7 +32,7 @@ jobs:
             echo "VERSION=${VERSION}" | tee -a "${GITHUB_ENV}"
             echo "COMMIT_SHA=$GITHUB_SHA" | tee -a "${GITHUB_ENV}"
             echo "IMAGE_TAG=${{ secrets.REGISTRY_ECR }}/ureport:${TAG}" | tee -a "${GITHUB_ENV}"
-            echo "IMAGE_SOURCE_URL=https://github.com/Ilhasoft/ureport" | tee -a "${GITHUB_ENV}"
+            echo "IMAGE_SOURCE_URL=https://github.com/weni-ai/ureport" | tee -a "${GITHUB_ENV}"
             echo "MANIFESTS_REPOSITORY=weni-ai/kubernetes-manifests-platform" | tee -a "${GITHUB_ENV}"
             echo "MANIFESTS_APPLICATION=ureport" | tee -a "${GITHUB_ENV}"
             echo "MANIFESTS_PATCH_TARGET=deployment.json" | tee -a "${GITHUB_ENV}"
