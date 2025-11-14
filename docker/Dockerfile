@@ -113,6 +113,8 @@ RUN apt-get update \
 COPY --chown=app_user:app_group . . 
 RUN ln -s "${PROJECT_PATH}"/ureport/settings.py.prod "${PROJECT_PATH}"/ureport/settings.py
 
+RUN chmod +x "${PROJECT_PATH}"/docker-entrypoint.sh
+
 ENTRYPOINT ["/ureport/docker-entrypoint.sh"]
 
 CMD ["start"]
