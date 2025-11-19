@@ -94,6 +94,7 @@ FROM base
 
 COPY --from=build /install /usr/local
 COPY --from=build --chown=app_user:app_group ${PROJECT_PATH} ${PROJECT_PATH}
+USER app_user
 
 RUN if [ ! "x${NODE_RUNTIME_DEPS}" = "x" ] ; then apt-get update \
  && apt-get install -y --no-install-recommends curl -y \
