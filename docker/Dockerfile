@@ -35,12 +35,9 @@ ARG RUNTIME_DEPS="\
 ARG NODE_RUNTIME_DEPS=${NODE_BUILD_DEPS}
 
 ARG APP_PORT="8000"
-
 ARG APP_VERSION="0.1"
 
-# set environment variables
 ENV PROJECT_PATH="/ureport"
-
 ENV APPLICATION_NAME="U-Report"
 
 ENV APP_VERSION=${APP_VERSION} \
@@ -68,7 +65,6 @@ LABEL app=${VERSION} \
 RUN addgroup --gid "${APP_GID}" app_group \
   && useradd --system -m -d ${PROJECT_PATH} -u "${APP_UID}" -g "${APP_GID}" app_user
 
-# set work directory
 WORKDIR ${PROJECT_PATH}
 
 FROM base AS build
@@ -82,7 +78,6 @@ RUN if [ ! "x${NODE_BUILD_DEPS}" = "x" ] ; then apt-get update \
 RUN if [ ! "x${BUILD_DEPS}" = "x" ] ; then apt-get update \
   && apt-get install -y --no-install-recommends ${BUILD_DEPS} ; fi
 
-# install dependencies
 COPY --from=build-poetry /app/requirements.txt .
 COPY weni_requirements.txt .
 
@@ -110,16 +105,19 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-# copy project
-COPY --chown=app_user:app_group . . 
+COPY --chown=app_user:app_group . .
+
 RUN ln -s "${PROJECT_PATH}"/ureport/settings.py.prod "${PROJECT_PATH}"/ureport/settings.py
+
+# 🔸 MOVIDO DO ENTRYPOINT: tudo em build-time
+RUN python manage.py collectstatic --noinput
+RUN python manage.py compress --extension=.haml,.html
+RUN python manage.py compilemessages
 
 RUN chmod +x "${PROJECT_PATH}"/docker-entrypoint.sh
 
 ENTRYPOINT ["/ureport/docker-entrypoint.sh"]
-
 CMD ["start"]
-#CMD sleep 6d
 
 HEALTHCHECK --interval=15s --timeout=20s --start-period=60s \
   CMD "${PROJECT_PATH}"/docker-entrypoint.sh healthcheck
